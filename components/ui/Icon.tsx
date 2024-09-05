@@ -15,6 +15,10 @@ export type AvailableIcons =
   | "pan_zoom"
   | "share"
   | "sell"
+  | "Link"
+  | "TwitterOutline"
+  | "LinkedinOutline"
+  | "FacebookOutline"
   | "check-circle"
   | "error"
   | "trash";
