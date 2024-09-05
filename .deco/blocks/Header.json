@@ -74,9 +74,10 @@
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/activities",
-      "name": "Activities",
-      "children": []
+      "url": "/blog",
+      "name": "Blog",
+      "children": [],
+      "identifier": "Blog"
     }
   ],
   "loading": "eager",
