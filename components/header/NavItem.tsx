@@ -35,21 +35,22 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
             <ul class="flex items-start justify-start gap-6 container">
               {children.map((node) => (
                 <li class="p-6 pl-0">
-                  {image?.url && (
-                    <Image
-                      class="p-6"
-                      src={image.url}
-                      alt={image.alternateName}
-                      width={300}
-                      height={332}
-                      loading="lazy"
-                    />
-                  )}
                   <a class="hover:underline" href={node.url}>
+                  {node.image?.[0]?.url && (
+                    <Image
+                        class="p-6"
+                        src={node.image[0].url}
+                        alt={node.image[0].alternateName}
+                        width={300}
+                        height={332}
+                        loading="lazy"
+                      />
+                    )}
+                  
                     <span>{node.name}</span>
-                  </a>
+                  
 
-                  <ul class="flex flex-col gap-1 mt-4">
+                  {/* <ul class="flex flex-col gap-1 mt-4">
                     {node.children?.map((leaf) => (
                       <li>
                         <a class="hover:underline" href={leaf.url}>
@@ -57,8 +58,9 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                         </a>
                       </li>
                     ))}
-                  </ul>
-                </li>
+                  </ul> */}
+                </a>
+              </li>
               ))}
             </ul>
           </div>
