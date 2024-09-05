@@ -78,12 +78,12 @@ function BannerItem(
         <div
           class={clx(
             "absolute h-full w-full top-0 left-0",
-            "flex flex-col justify-center items-center",
-            "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
+            "flex flex-col justify-start items-center",
+            "px-5 sm:px-0 pt-[40px]",
+            "sm:left-0 sm:items-center sm:max-w-full",
           )}
         >
-          <span class="text-7xl font-bold text-base-100">
+          <span class="text-7xl font-bold text-base-100 ">
             {action.title}
           </span>
           <span class="font-normal text-base text-base-100 pt-4 pb-12">
@@ -134,7 +134,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px] min-h-[660px]",
         "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-screen",
+        "w-full",
       )}
     >
       <div class="col-span-full row-span-full">
