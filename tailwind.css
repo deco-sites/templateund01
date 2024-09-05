@@ -23,6 +23,16 @@
     height: 100vh;
   }
 }
+.container-custom{
+  margin: 0 16px;
+}
+
+@media screen and (min-width: 1055px) {
+  .container-custom{
+    margin: 0 32px;
+  }
+  
+}
 
 .group:disabled .group-disabled\:animate-progress {
   animation: progress-frame ease normal

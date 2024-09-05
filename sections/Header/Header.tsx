@@ -74,10 +74,18 @@ const Desktop = (
           : <Searchbar {...searchbar} />}
       </div>
     </Modal>
-
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300">
-      <div class="grid grid-cols-3 place-items-center">
-        <div class="place-self-start">
+    
+    <div class="flex flex-col gap-4 pt-5 container-custom">
+      <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center">
+        <ul class="flex">
+          {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
+        </ul>
+        <div>
+          {/* ship to */}
+        </div>
+      </div>
+        <div class="place-self-center">
           <a href="/" aria-label="Store logo">
             <Image
               src={logo.src}
@@ -87,31 +95,28 @@ const Desktop = (
             />
           </a>
         </div>
+        <div className="left_content flex flex-row gap-3 items-center">
+          <label
+            for={SEARCHBAR_POPUP_ID}
+            class="input input-bordered flex items-center gap-2 w-full"
+            aria-label="search icon button"
+          >
+            <Icon id="search" />
+            <span class="text-base-400 truncate">
+              Search products, brands...
+            </span>
+          </label>
+          <a href="/account" class="flex gap-4 place-self-end">
+            <Icon id="account_circle" />
+          </a>
+          <div class="flex gap-4 place-self-end">
+            <Bag />
+          </div>
 
-        <label
-          for={SEARCHBAR_POPUP_ID}
-          class="input input-bordered flex items-center gap-2 w-full"
-          aria-label="search icon button"
-        >
-          <Icon id="search" />
-          <span class="text-base-400 truncate">
-            Search products, brands...
-          </span>
-        </label>
-
-        <div class="flex gap-4 place-self-end">
-          <Bag />
         </div>
       </div>
 
-      <div class="flex justify-between items-center">
-        <ul class="flex">
-          {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
-        </ul>
-        <div>
-          {/* ship to */}
-        </div>
-      </div>
+      
     </div>
   </>
 );
