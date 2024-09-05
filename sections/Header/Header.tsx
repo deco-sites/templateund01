@@ -5,6 +5,7 @@ import { useDevice } from "deco/hooks/useDevice.ts";
 import { LoadingFallbackProps } from "deco/mod.ts";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
+import SignIn from "../../components/header/SignIn.tsx";
 import Menu from "../../components/header/Menu.tsx";
 import NavItem from "../../components/header/NavItem.tsx";
 import Searchbar, {
@@ -12,13 +13,14 @@ import Searchbar, {
 } from "../../components/search/Searchbar/Form.tsx";
 import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import Modal from "../../components/ui/Modal.tsx";
+import HeaderScroll from "../../components/ui/HeaderScroll.tsx";
+// import Modal from "../../components/ui/Modal.tsx";
 import {
   HEADER_HEIGHT_DESKTOP,
   HEADER_HEIGHT_MOBILE,
   NAVBAR_HEIGHT_MOBILE,
   SEARCHBAR_DRAWER_ID,
-  SEARCHBAR_POPUP_ID,
+  // SEARCHBAR_POPUP_ID,
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
 } from "../../constants.ts";
@@ -29,7 +31,12 @@ export interface Logo {
   width?: number;
   height?: number;
 }
-
+export interface LogoSecondary {
+  src: ImageWidget;
+  alt: string;
+  width?: number;
+  height?: number;
+}
 export interface SectionProps {
   alerts?: HTMLWidget[];
 
@@ -47,7 +54,8 @@ export interface SectionProps {
 
   /** @title Logo */
   logo: Logo;
-
+  /** @title secondaryLogo */
+  logoSecondary: LogoSecondary;
   /**
    * @description Usefull for lazy loading hidden elements, like hamburguer menus etc
    * @hide true */
@@ -57,10 +65,10 @@ export interface SectionProps {
 type Props = Omit<SectionProps, "alert">;
 
 const Desktop = (
-  { navItems, logo, searchbar, loading }: Props,
+  { navItems, logo, searchbar, logoSecondary }: Props,
 ) => (
   <>
-    <Modal id={SEARCHBAR_POPUP_ID}>
+    {/* <Modal id={SEARCHBAR_POPUP_ID}>
       <div
         class="absolute top-0 bg-base-100 container"
         style={{ marginTop: HEADER_HEIGHT_MOBILE }}
@@ -73,9 +81,9 @@ const Desktop = (
           )
           : <Searchbar {...searchbar} />}
       </div>
-    </Modal>
+    </Modal> */}
     
-    <div class="flex flex-col gap-4 pt-5 container-custom">
+    <div class="flex flex-col gap-4 py-5 container-custom">
       <div class="flex justify-between items-center">
       <div class="flex justify-between items-center">
         <ul class="flex">
@@ -86,7 +94,7 @@ const Desktop = (
         </div>
       </div>
         <div class="place-self-center">
-          <a href="/" aria-label="Store logo">
+          <a href="/" aria-label="Store logo" class="logo">
             <Image
               src={logo.src}
               alt={logo.alt}
@@ -94,9 +102,17 @@ const Desktop = (
               height={logo.height || 23}
             />
           </a>
+          <a href="/" aria-label="Store logo" class="logoSecondary">
+            <Image
+              src={logoSecondary.src}
+              alt={logoSecondary.alt}
+              width={logoSecondary.width || 100}
+              height={logoSecondary.height || 23}
+            />
+          </a>
         </div>
         <div className="left_content flex flex-row gap-3 items-center">
-          <label
+          {/* <label
             for={SEARCHBAR_POPUP_ID}
             class="input input-bordered flex items-center gap-2 w-full"
             aria-label="search icon button"
@@ -105,10 +121,14 @@ const Desktop = (
             <span class="text-base-400 truncate">
               Search products, brands...
             </span>
-          </label>
-          <a href="/account" class="flex gap-4 place-self-end">
+          </label> */}
+            <Searchbar {...searchbar} />
+          {/* <a href="/account" class="flex gap-4 place-self-end">
             <Icon id="account_circle" />
-          </a>
+          </a> */}
+          <div class="flex gap-4 place-self-end">
+            <SignIn />
+          </div>
           <div class="flex gap-4 place-self-end">
             <Bag />
           </div>
@@ -199,6 +219,7 @@ const Mobile = (
       >
         <Icon id="search" />
       </label>
+      
       <Bag />
     </div>
   </>
@@ -218,20 +239,37 @@ function Header({
   const device = useDevice();
 
   return (
-    <header
-      style={{
+    <>
+     <HeaderScroll className={`fixed z-20 w-full`} style={{
         height: device === "desktop"
           ? HEADER_HEIGHT_DESKTOP
           : HEADER_HEIGHT_MOBILE,
-      }}
-    >
-      <div class="bg-base-100 fixed w-full z-40">
-        {alerts.length > 0 && <Alert alerts={alerts} />}
-        {device === "desktop"
-          ? <Desktop logo={logo} {...props} />
-          : <Mobile logo={logo} {...props} />}
-      </div>
-    </header>
+      }}>
+        <div class="w-full z-40">
+          {alerts.length > 0 && <Alert alerts={alerts} />}
+          {device === "desktop"
+            ? <Desktop logo={logo} {...props} />
+            : <Mobile logo={logo} {...props} />}
+        </div>
+      </HeaderScroll>
+    </>
+    // <header
+    // style={{
+    //   height: device === "desktop"
+    //   ? HEADER_HEIGHT_DESKTOP
+    //   : HEADER_HEIGHT_MOBILE,
+    // }}
+    // >
+   
+
+    // </HeaderScroll>
+    //   <div class="bg-base-100 fixed w-full z-40">
+    //     {alerts.length > 0 && <Alert alerts={alerts} />}
+    //     {device === "desktop"
+    //       ? <Desktop logo={logo} {...props} />
+    //       : <Mobile logo={logo} {...props} />}
+    //   </div>
+    // </header>
   );
 }
 

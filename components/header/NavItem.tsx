@@ -1,13 +1,12 @@
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import {
-  HEADER_HEIGHT_DESKTOP,
   NAVBAR_HEIGHT_DESKTOP,
 } from "../../constants.ts";
 
 function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
-  const image = item?.image?.[0];
+  // const image = item?.image?.[0];
 
   return (
     <li
@@ -16,7 +15,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
     >
       <a
         href={url}
-        class="group-hover:underline text-sm font-medium"
+        class="text-sm font-medium"
       >
         {name}
       </a>
@@ -35,10 +34,10 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
             <ul class="flex items-start justify-start gap-6 container">
               {children.map((node) => (
                 <li class="p-6 pl-0">
-                  <a class="hover:underline" href={node.url}>
+                  <a class="hover:underline flex flex-col items-center" href={node.url}>
                   {node.image?.[0]?.url && (
                     <Image
-                        class="p-6"
+                        class="py-6"
                         src={node.image[0].url}
                         alt={node.image[0].alternateName}
                         width={300}

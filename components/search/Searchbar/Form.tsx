@@ -79,13 +79,13 @@ export default function Searchbar(
 
   return (
     <div
-      class="w-full grid gap-8 px-4 py-6"
+      class="w-full grid"
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join">
+      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="inline-flex border-b border-[currentColor] roundered">
         <button
           type="submit"
-          class="btn join-item btn-square no-animation"
+          class="no-animation"
           aria-label="Search"
           for={SEARCHBAR_INPUT_FORM_ID}
           tabIndex={-1}
@@ -96,7 +96,7 @@ export default function Searchbar(
         <input
           autoFocus
           tabIndex={0}
-          class="input input-bordered join-item flex-grow"
+          class="input border-0 join-item text-[currentColor] outline-[none] flex-grow bg-transparent"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -108,14 +108,14 @@ export default function Searchbar(
           hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
           hx-swap="innerHTML"
         />
-        <label
+        {/* <label
           type="button"
           class="join-item btn btn-ghost btn-square hidden sm:inline-flex no-animation"
           for={SEARCHBAR_POPUP_ID}
           aria-label="Toggle searchbar"
         >
           <Icon id="close" />
-        </label>
+        </label> */}
       </form>
 
       {/* Suggestions slot */}

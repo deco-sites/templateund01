@@ -33,7 +33,54 @@
   }
   
 }
+input{
+  outline: none !important;
+}
+header:hover{
+  background: #fff !important;
+  color: #020242 !important;
+}
+header.scroll-down{
+  background: #fff;
+  color: #020242;
+}
+header.scroll-up{
+  background: transparent;
+  color: #fff;
+}
+header{
+  background: transparent;
+  color: #fff;
+}
+header.not-home{
+  background: #fff;
+  color: #020242;
+}
+header.not-home .logoSecondary{
+  display: block !important;
+}
+header.not-home .logo{
+  display: none !important;
+}
+header .logo{
+  display: block;
+}
+header .logoSecondary{
+  display: none;
+}
+header.scroll-down .logoSecondary{
+  display: block;
+}
+header.scroll-down .logo{
+  display: none;
+}
 
+header.scroll-up .logoSecondary{
+  display: none;
+}
+header.scroll-up .logo{
+  display: block;
+}
 .group:disabled .group-disabled\:animate-progress {
   animation: progress-frame ease normal
 }

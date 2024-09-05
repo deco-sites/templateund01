@@ -9,10 +9,10 @@
   },
   "alerts": [],
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ed9f7e80-86a8-4b72-9809-2e4e2e5f0e53",
-    "alt": "Deco Storefront",
-    "width": 160,
-    "height": 40
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/9d1925d6-9dbc-4f4c-b992-c1a2115fb698/logoBranca.png",
+    "alt": "logo",
+    "width": 106,
+    "height": 62
   },
   "navItems": [
     {
@@ -79,5 +79,11 @@
       "children": []
     }
   ],
-  "loading": "eager"
+  "loading": "eager",
+  "logoSecondary": {
+    "src": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/f0444c81-71dc-437e-a3a9-4c76097da257/logo-(1).png",
+    "alt": "logo",
+    "width": 106,
+    "height": 62
+  }
 }
