@@ -83,7 +83,7 @@ const Desktop = (
       </div>
     </Modal> */}
     
-    <div class="flex flex-col gap-4 py-5 container-custom">
+    <div class="flex flex-col gap-4 py-3 container-custom">
       <div class="flex justify-between items-center">
       <div class="flex justify-between items-center">
         <ul class="flex">

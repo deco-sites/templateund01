@@ -40,6 +40,12 @@ header:hover{
   background: #fff !important;
   color: #020242 !important;
 }
+header:hover .logo{
+  display: none;
+}
+header:hover .logoSecondary{
+  display: block;
+}
 header.scroll-down{
   background: #fff;
   color: #020242;
@@ -84,7 +90,10 @@ header.scroll-up .logo{
 .group:disabled .group-disabled\:animate-progress {
   animation: progress-frame ease normal
 }
-
+header input::placeholder{
+  color: currentColor !important;
+  font-size: 14px;
+}
 @keyframes progress-frame {
   0% {
     --dot-progress: 0%
