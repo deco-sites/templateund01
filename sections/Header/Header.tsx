@@ -15,6 +15,7 @@ import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import HeaderScroll from "../../components/ui/HeaderScroll.tsx";
 // import Modal from "../../components/ui/Modal.tsx";
+import { useScript } from "deco/hooks/useScript.ts";
 import {
   HEADER_HEIGHT_DESKTOP,
   HEADER_HEIGHT_MOBILE,
@@ -63,7 +64,29 @@ export interface SectionProps {
 }
 
 type Props = Omit<SectionProps, "alert">;
+const script = () =>{
+  const isHomePage = () => {
+    return window.location.pathname === '/';
+  };
 
+  // Função chamada no carregamento da página
+  const headerpages = () => {
+    const headerPage = document.querySelector('header');
+    if (headerPage) {
+      if (!isHomePage()) {
+        // Não está na home page
+        headerPage.classList.add('not-home');
+      } else {
+        // Está na home page
+        headerPage.classList.remove('not-home');
+      }
+    }
+  };
+  setTimeout(() => {
+    headerpages()
+  }, 200);
+
+}
 const Desktop = (
   { navItems, logo, searchbar, logoSecondary }: Props,
 ) => (
@@ -252,7 +275,12 @@ function Header({
             : <Mobile logo={logo} {...props} />}
         </div>
       </HeaderScroll>
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{ __html: useScript(script) }}
+      />
     </>
+    
     // <header
     // style={{
     //   height: device === "desktop"

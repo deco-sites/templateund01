@@ -39,6 +39,7 @@ input{
 header:hover{
   background: #fff !important;
   color: #020242 !important;
+  transition: all 0.6s;
 }
 header:hover .logo{
   display: none;
@@ -46,21 +47,31 @@ header:hover .logo{
 header:hover .logoSecondary{
   display: block;
 }
+header.scroll-up:hover .logoSecondary{
+  display: block;
+}
+header.scroll-up:hover .logo{
+  display: none;
+}
 header.scroll-down{
   background: #fff;
   color: #020242;
+  transition: all 0.6s;
 }
 header.scroll-up{
   background: transparent;
   color: #fff;
+  transition: all 0.6s;
 }
 header{
   background: transparent;
   color: #fff;
+  transition: all 0.6s;
 }
 header.not-home{
   background: #fff;
   color: #020242;
+  
 }
 header.not-home .logoSecondary{
   display: block !important;

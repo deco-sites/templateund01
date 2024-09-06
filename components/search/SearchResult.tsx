@@ -250,7 +250,7 @@ function Result(props: SectionProps<typeof loader>) {
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
+            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-12 sm:py-16 px-5 sm:px-0">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
 
               {device === "mobile" && (

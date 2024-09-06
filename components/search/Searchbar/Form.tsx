@@ -96,7 +96,7 @@ export default function Searchbar(
         <input
           autoFocus
           tabIndex={0}
-          class="input border-0 join-item text-[currentColor] outline-[none] flex-grow bg-transparent text-3.5"
+          class="input border-0 join-item text-[currentColor] outline-[none] flex-grow bg-transparent text-[16px]"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"

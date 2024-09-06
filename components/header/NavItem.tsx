@@ -15,7 +15,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
     >
       <a
         href={url}
-        class="text-3.5 font-medium"
+        class="text-sm font-medium"
       >
         {name}
       </a>
@@ -34,7 +34,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
             <ul class="flex items-start justify-start gap-6 container">
               {children.map((node) => (
                 <li class="p-6 pl-0">
-                  <a class="hover:underline flex flex-col items-center text-3.5" href={node.url}>
+                  <a class="hover:underline flex flex-col items-center text-sm" href={node.url}>
                   {node.image?.[0]?.url && (
                     <Image
                         class="py-6"

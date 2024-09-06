@@ -72,25 +72,25 @@ function BannerItem(
       {...selectPromotionEvent}
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative block overflow-y-hidden w-full"
+      class="relative block overflow-hidden w-full"
     >
       {action && (
         <div
           class={clx(
-            "absolute h-full w-full top-0 left-0",
+            "absolute h-full w-full top-[46px] left-0",
             "flex flex-col justify-start items-center",
-            "px-5 sm:px-0 pt-[40px]",
+            "px-5 sm:px-0 pt-[68px] mx-[16px]",
             "sm:left-0 sm:items-center sm:max-w-full",
           )}
         >
-          <span class="text-7xl font-bold text-base-100 ">
+          <span class="text-[32px] font-bold text-base-100 ">
             {action.title}
           </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
+          <span class="font-normal text-base text-base-100 py-3">
             {action.subTitle}
           </span>
           <button
-            class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
+            class="bg-transparent text-white px-3 py-2 border hover:bg-white hover:text-[#051232] border-white text-sm uppercase"
             aria-label={action.label}
           >
             {action.label}
@@ -167,16 +167,17 @@ function Carousel({ images = [], preload, interval }: Props) {
 
       <ul
         class={clx(
-          "col-span-full row-start-4 z-10",
+          "col-span-full row-start-4 z-10 rounded-[800px]",
           "carousel justify-center gap-3",
+          "w-fit h-fit mx-auto bg-[#00000033] px-[18px] py-[10px]",
         )}
       >
         {images.map((_, index) => (
-          <li class="carousel-item">
+          <li class="carousel-item h-fit">
             <Slider.Dot
               index={index}
               class={clx(
-                "bg-black opacity-20 h-3 w-3 no-animation rounded-full",
+                "bg-black opacity-20 h-1.5 w-1.5 no-animation rounded-full",
                 "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
               )}
             >

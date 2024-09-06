@@ -9,7 +9,7 @@ interface HeaderScrollProps {
 
 const script = () => {
   let lastScrollTop = 0;
-  // Função para aplicar a classe 'not-home' se não estiver na página inicial
+
 
   const handler = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -32,7 +32,11 @@ const script = () => {
    
   };
 
-  addEventListener("scroll", handler);
+  document.addEventListener("scroll", handler);
+  // Limpar eventos se necessário
+  return () => {
+    document.removeEventListener("scroll", handler);
+  };
 };
 
 function HeaderScroll({ style, children, className }: HeaderScrollProps) {

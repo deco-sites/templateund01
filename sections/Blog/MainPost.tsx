@@ -42,7 +42,7 @@ export default function MainPost({
   },
 }: Props) {
   return (
-    <div class="container lg:mx-auto lg:py-14 mx-2 py-12 text-sm">
+    <div class="container lg:mx-auto lg:py-14 mx-2 py-16 text-sm">
       <div class="space-y-16">
         <a
           href={`/blog/${post?.slug}`}
