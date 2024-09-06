@@ -64,34 +64,34 @@ export interface SectionProps {
 }
 
 type Props = Omit<SectionProps, "alert">;
-const script = () =>{
+const script = () => {
   const isHomePage = () => {
-    return window.location.pathname === '/';
+    return window.location.pathname === "/";
   };
 
   // Função chamada no carregamento da página
   const headerpages = () => {
-    const headerPage = document.querySelector('header');
+    const headerPage = document.querySelector("header");
     if (headerPage) {
       if (!isHomePage()) {
         // Não está na home page
-        headerPage.classList.add('not-home');
+        headerPage.classList.add("not-home");
       } else {
         // Está na home page
-        headerPage.classList.remove('not-home');
+        headerPage.classList.remove("not-home");
       }
     }
   };
   setTimeout(() => {
-    headerpages()
+    headerpages();
   }, 200);
-
-}
+};
 const Desktop = (
   { navItems, logo, searchbar, logoSecondary }: Props,
 ) => (
   <>
-    {/* <Modal id={SEARCHBAR_POPUP_ID}>
+    {
+      /* <Modal id={SEARCHBAR_POPUP_ID}>
       <div
         class="absolute top-0 bg-base-100 container"
         style={{ marginTop: HEADER_HEIGHT_MOBILE }}
@@ -104,18 +104,19 @@ const Desktop = (
           )
           : <Searchbar {...searchbar} />}
       </div>
-    </Modal> */}
-    
+    </Modal> */
+    }
+
     <div class="flex flex-col gap-4 py-3 container-custom">
       <div class="flex justify-between items-center">
-      <div class="flex justify-between items-center">
-        <ul class="flex">
-          {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
-        </ul>
-        <div>
-          {/* ship to */}
+        <div class="flex justify-between items-center">
+          <ul class="flex">
+            {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
+          </ul>
+          <div>
+            {/* ship to */}
+          </div>
         </div>
-      </div>
         <div class="place-self-center">
           <a href="/" aria-label="Store logo" class="logo">
             <Image
@@ -135,7 +136,8 @@ const Desktop = (
           </a>
         </div>
         <div className="left_content flex flex-row gap-3 items-center">
-          {/* <label
+          {
+            /* <label
             for={SEARCHBAR_POPUP_ID}
             class="input input-bordered flex items-center gap-2 w-full"
             aria-label="search icon button"
@@ -144,22 +146,22 @@ const Desktop = (
             <span class="text-base-400 truncate">
               Search products, brands...
             </span>
-          </label> */}
-            <Searchbar {...searchbar} />
-          {/* <a href="/account" class="flex gap-4 place-self-end">
+          </label> */
+          }
+          <Searchbar {...searchbar} />
+          {
+            /* <a href="/account" class="flex gap-4 place-self-end">
             <Icon id="account_circle" />
-          </a> */}
+          </a> */
+          }
           <div class="flex gap-4 place-self-end">
             <SignIn />
           </div>
           <div class="flex gap-4 place-self-end">
             <Bag />
           </div>
-
         </div>
       </div>
-
-      
     </div>
   </>
 );
@@ -242,7 +244,7 @@ const Mobile = (
       >
         <Icon id="search" />
       </label>
-      
+
       <Bag />
     </div>
   </>
@@ -263,11 +265,14 @@ function Header({
 
   return (
     <>
-     <HeaderScroll className={`fixed z-20 w-full`} style={{
-        height: device === "desktop"
-          ? HEADER_HEIGHT_DESKTOP
-          : HEADER_HEIGHT_MOBILE,
-      }}>
+      <HeaderScroll
+        className={`fixed z-20 w-full`}
+        style={{
+          height: device === "desktop"
+            ? HEADER_HEIGHT_DESKTOP
+            : HEADER_HEIGHT_MOBILE,
+        }}
+      >
         <div class="w-full z-40">
           {alerts.length > 0 && <Alert alerts={alerts} />}
           {device === "desktop"
@@ -280,7 +285,6 @@ function Header({
         dangerouslySetInnerHTML={{ __html: useScript(script) }}
       />
     </>
-    
     // <header
     // style={{
     //   height: device === "desktop"
@@ -288,7 +292,6 @@ function Header({
     //   : HEADER_HEIGHT_MOBILE,
     // }}
     // >
-   
 
     // </HeaderScroll>
     //   <div class="bg-base-100 fixed w-full z-40">

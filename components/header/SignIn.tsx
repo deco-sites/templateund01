@@ -32,25 +32,21 @@ function SignIn() {
       <a
         class={clx(
           "btn btn-sm font-thin btn-ghost no-animation",
-          
         )}
         href="/login"
         aria-label="Login"
       >
         <Icon id="account_circle" />
-       
       </a>
       <a
         class={clx(
           "hidden",
           "btn btn-sm font-thin btn-ghost no-animation",
-         
         )}
         href="/account"
         aria-label="Account"
       >
         <Icon id="account_circle" />
-      
       </a>
       <script
         type="module"

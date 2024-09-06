@@ -43,7 +43,6 @@ const DEFAULT_PROPS: BlogPost = {
 };
 
 function SocialIcons() {
-
   return (
     <div class="flex gap-2">
       <div class="bg-gray-200 rounded-full p-1">
