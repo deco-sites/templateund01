@@ -63,6 +63,10 @@ header.scroll-up{
   color: #fff;
   transition: all 0.6s;
 }
+.contrast:hover{
+  filter: contrast(0.6);
+  transition: all 0.5s;
+}
 header{
   background: transparent;
   color: #fff;

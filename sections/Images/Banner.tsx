@@ -1,12 +1,12 @@
-import { type HTMLWidget, type ImageWidget } from "apps/admin/widgets.ts";
+import {  type ImageWidget } from "apps/admin/widgets.ts";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 
 export interface Props {
   title: string;
-  description?: HTMLWidget;
-
+  description?: string;
+  colorText: string;
   images: {
     mobile: ImageWidget;
     desktop: ImageWidget;
@@ -18,9 +18,9 @@ export interface Props {
   };
 }
 
-function Banner({ title, description, images, cta }: Props) {
+function Banner({ title, description, images, cta, colorText }: Props) {
   return (
-    <Section.Container>
+    <Section.Container class="container">
       <div class="relative bg-base-200 mx-5 sm:mx-0">
         <Picture>
           <Source
@@ -38,19 +38,21 @@ function Banner({ title, description, images, cta }: Props) {
           <img src={images.desktop} alt={title} class="w-full object-cover" />
         </Picture>
 
-        <div
+        <div 
+          style={{ color: colorText }}
           class={clx(
             "absolute left-0 top-0",
             "p-5 sm:p-10 md:py-20 md:px-[60px]",
             "flex flex-col",
-            "h-full max-w-full sm:max-w-[33%] md:max-w-[50%] justify-center",
+            "h-full max-w-full sm:max-w-[33%] md:max-w-[50%] justify-start",
           )}
         >
-          {title && <span class="font-bold text-7xl text-primary">{title}
+          {title && <span class="font-bold text-base text-[currentColor]">{title}
           </span>}
           {description && (
             <span
-              class="font-normal text-sm md: pt-4 pb-12"
+              style={{ color: colorText }}
+              class="font-normal text-sm md:pt-2 pb-2 text-[currentColor]"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           )}
@@ -58,7 +60,7 @@ function Banner({ title, description, images, cta }: Props) {
             {cta && (
               <a
                 href={cta.href}
-                class="btn btn-primary no-animatio w-fit border-0 min-w-[180px]"
+                class="btn btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 border-transparent hover:border-base-200"
               >
                 {cta.label}
               </a>

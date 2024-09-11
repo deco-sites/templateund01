@@ -177,8 +177,8 @@ function Carousel({ images = [], preload, interval }: Props) {
             <Slider.Dot
               index={index}
               class={clx(
-                "bg-black opacity-20 h-1.5 w-1.5 no-animation rounded-full",
-                "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
+                "bg-black opacity-20 h-1.5 w-1.5 border border-[#FFFFFF] no-animation rounded-full",
+                "disabled:w-1.5 disabled:bg-[#FFFFFFD1] disabled:border-[transparent] disabled:opacity-100 transition-[width]",
               )}
             >
             </Slider.Dot>

@@ -12,6 +12,7 @@ export interface Props {
   pins?: Pin[];
 
   title?: {
+    imageBanner?: ImageWidget; // Adicionando imageBanner como opcional
     content?: string;
     layout?: {
       position?: "justify-start" | "justify-center" | "justify-end";
@@ -77,7 +78,7 @@ function ShoppableBanner(props: Props) {
   const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div class="container">
+    <div class="container mb-8">
       <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2">
         <figure class="relative">
           <Picture>
@@ -127,7 +128,33 @@ function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="flex flex-col justify-center gap-6 py-20 px-8 bg-neutral-content">
+        <div class="flex flex-col justify-center gap-6 py-20 px-8 bg-base-200">
+          {title?.imageBanner && (
+            <figure class="relative">
+              <Picture class="w-fit">
+                <Source
+                  media="(max-width: 767px)"
+                  src={title.imageBanner}
+                  width={192}
+                  height={95}
+                />
+                <Source
+                  media="(min-width: 768px)"
+                  src={title.imageBanner || title.imageBanner}
+                  width={192}
+                  height={95}
+                />
+                <img
+                  class="w-48 h-24 object-cover"
+                  sizes="(max-width: 640px) 100vw, 30vw"
+                  src={title.imageBanner}
+                  alt={title?.content}
+                  decoding="async"
+                  loading="lazy"
+                />
+              </Picture>
+            </figure>
+          )}
           <h2 class={`card-title flex ${title?.layout?.position}`}>
             {title?.content}
           </h2>
@@ -135,7 +162,7 @@ function ShoppableBanner(props: Props) {
             {text?.content}
           </p>
           <div class={`card-actions ${link?.layout?.position}`}>
-            <a class="underline" href={link?.href}>{link?.text}</a>
+            <span class="text-white text-center text-base" href={link?.href}>{link?.text}</span>
           </div>
         </div>
       </div>

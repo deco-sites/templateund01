@@ -22,5 +22,8 @@
   "font": {
     "family": "Inter",
     "styleSheet": "normal"
+  },
+  "complementaryColors": {
+    "base-200": "#051232"
   }
 }

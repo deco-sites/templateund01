@@ -4,13 +4,14 @@ import { useDevice } from "deco/hooks/useDevice.ts";
 import Section, {
   type Props as SectionHeaderProps,
 } from "../../components/ui/Section.tsx";
-import Slider from "../../components/ui/Slider.tsx";
-import { clx } from "../../sdk/clx.ts";
+// import Slider from "../../components/ui/Slider.tsx";
+// import { clx } from "../../sdk/clx.ts";
 import { LoadingFallbackProps } from "deco/mod.ts";
 
 /** @titleBy label */
 export interface Item {
   image: ImageWidget;
+  text: string;
   href: string;
   label: string;
 }
@@ -19,19 +20,20 @@ export interface Props extends SectionHeaderProps {
   items: Item[];
 }
 
-function Card({ image, href, label }: Item) {
+function Card({ image, href, label, text }: Item) {
   return (
     <a href={href} class="flex flex-col items-center justify-center gap-4">
-      <div class="w-44 h-44 rounded-full bg-base-200 flex justify-center items-center border border-transparent hover:border-primary">
+      <div class="lg:w-44 lg:h-44 w-24 h-24 rounded-full flex justify-center items-center contrast">
         <Image
           src={image}
           alt={label}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           loading="lazy"
         />
       </div>
-      <span class="font-medium text-sm">{label}</span>
+      <span className="font-medium text-sm uppercase text-base-200">{text}</span>
+      <span class="font-medium text-sm underline text-base-200">{label}</span>
     </a>
   );
 }
@@ -41,7 +43,7 @@ function CategoryGrid({ title, cta, items }: Props) {
 
   return (
     <Section.Container>
-      <Section.Header title={title} cta={cta} />
+      <Section.Header title={title} cta={cta}  />
 
       {device === "desktop"
         ? (
@@ -50,20 +52,9 @@ function CategoryGrid({ title, cta, items }: Props) {
           </div>
         )
         : (
-          <Slider class="carousel carousel-center sm:carousel-end gap-5 w-full">
-            {items.map((i, index) => (
-              <Slider.Item
-                index={index}
-                class={clx(
-                  "carousel-item",
-                  "first:pl-5 first:sm:pl-0",
-                  "last:pr-5 last:sm:pr-0",
-                )}
-              >
-                <Card {...i} />
-              </Slider.Item>
-            ))}
-          </Slider>
+          <div class="grid grid-cols-3 gap-10 overflow-hidden">
+            {items.map((i) => <Card {...i} />)}
+          </div>
         )}
     </Section.Container>
   );

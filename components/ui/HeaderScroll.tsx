@@ -19,7 +19,7 @@ const script = () => {
         // console.log('scroll-down');
         header.classList.add("scroll-down");
         header.classList.remove("scroll-up");
-      } else if (scrollTop < lastScrollTop) {
+      } else if (scrollTop < 1 ) {
         // console.log('scroll-up');
         header.classList.add("scroll-up");
         header.classList.remove("scroll-down");
