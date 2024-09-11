@@ -162,7 +162,9 @@ function ShoppableBanner(props: Props) {
             {text?.content}
           </p>
           <div class={`card-actions ${link?.layout?.position}`}>
-            <span class="text-white text-center text-base" href={link?.href}>{link?.text}</span>
+            <span class="text-white text-center text-base" href={link?.href}>
+              {link?.text}
+            </span>
           </div>
         </div>
       </div>

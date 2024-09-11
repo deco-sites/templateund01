@@ -32,9 +32,10 @@ function Card({ image, title, label }: Item) {
         />
       </div>
       <div class="flex flex-col">
-        <span class="font-medium text-base text-base-200 font-semibold">{title}</span>
+        <span class="font-medium text-base text-base-200 font-semibold">
+          {title}
+        </span>
         <span class="font-medium text-sm text-base-200">{label}</span>
-
       </div>
     </div>
   );
@@ -44,7 +45,10 @@ function InfoBar({ title, cta, items }: Props) {
   const device = useDevice();
 
   return (
-    <Section.Container class="relative top-[-10px]" style={{ backgroundColor: '#EEEAE5' }}>
+    <Section.Container
+      class="relative top-[-10px]"
+      style={{ backgroundColor: "#EEEAE5" }}
+    >
       <Section.Header title={title} cta={cta} />
 
       {device === "desktop"

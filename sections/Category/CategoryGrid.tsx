@@ -32,7 +32,9 @@ function Card({ image, href, label, text }: Item) {
           loading="lazy"
         />
       </div>
-      <span className="font-medium text-sm uppercase text-base-200">{text}</span>
+      <span className="font-medium text-sm uppercase text-base-200">
+        {text}
+      </span>
       <span class="font-medium text-sm underline text-base-200">{label}</span>
     </a>
   );
@@ -43,7 +45,7 @@ function CategoryGrid({ title, cta, items }: Props) {
 
   return (
     <Section.Container>
-      <Section.Header title={title} cta={cta}  />
+      <Section.Header title={title} cta={cta} />
 
       {device === "desktop"
         ? (

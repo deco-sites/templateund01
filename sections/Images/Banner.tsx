@@ -1,4 +1,4 @@
-import {  type ImageWidget } from "apps/admin/widgets.ts";
+import { type ImageWidget } from "apps/admin/widgets.ts";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
@@ -38,7 +38,7 @@ function Banner({ title, description, images, cta, colorText }: Props) {
           <img src={images.desktop} alt={title} class="w-full object-cover" />
         </Picture>
 
-        <div 
+        <div
           style={{ color: colorText }}
           class={clx(
             "absolute left-0 top-0",
@@ -47,8 +47,9 @@ function Banner({ title, description, images, cta, colorText }: Props) {
             "h-full max-w-full sm:max-w-[33%] md:max-w-[50%] justify-start",
           )}
         >
-          {title && <span class="font-bold text-base text-[currentColor]">{title}
-          </span>}
+          {title && (
+            <span class="font-bold text-base text-[currentColor]">{title}</span>
+          )}
           {description && (
             <span
               style={{ color: colorText }}
