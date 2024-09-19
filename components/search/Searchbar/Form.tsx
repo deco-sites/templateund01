@@ -79,7 +79,7 @@ export default function Searchbar(
 
   return (
     <div
-      class="w-full grid"
+      class="w-full grid max-lg:px-[16px]"
       style={{ gridTemplateRows: "min-content auto" }}
     >
       <form
@@ -97,8 +97,7 @@ export default function Searchbar(
           <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
           <Icon id="search" class="inline [.htmx-request_&]:hidden" />
         </button>
-        <input
-          autoFocus
+        <input   
           tabIndex={0}
           class="input border-0 join-item text-[currentColor] outline-[none] flex-grow bg-transparent text-[16px]"
           name={NAME}

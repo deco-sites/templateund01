@@ -20,7 +20,7 @@ import {
   HEADER_HEIGHT_DESKTOP,
   HEADER_HEIGHT_MOBILE,
   NAVBAR_HEIGHT_MOBILE,
-  SEARCHBAR_DRAWER_ID,
+  // SEARCHBAR_DRAWER_ID,
   // SEARCHBAR_POPUP_ID,
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
@@ -167,10 +167,10 @@ const Desktop = (
 );
 
 const Mobile = (
-  { logo, searchbar, navItems, loading }: Props,
+  { logo, searchbar, navItems, loading, logoSecondary }: Props,
 ) => (
   <>
-    <Drawer
+    {/* <Drawer
       id={SEARCHBAR_DRAWER_ID}
       aside={
         <Drawer.Aside title="Search" drawer={SEARCHBAR_DRAWER_ID}>
@@ -185,7 +185,7 @@ const Mobile = (
           </div>
         </Drawer.Aside>
       }
-    />
+    /> */}
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
@@ -206,7 +206,7 @@ const Mobile = (
     />
 
     <div
-      class="grid place-items-center w-screen px-5 gap-4"
+      class="flex justify-between place-items-center w-screen px-5 gap-4"
       style={{
         height: NAVBAR_HEIGHT_MOBILE,
         gridTemplateColumns:
@@ -224,7 +224,7 @@ const Mobile = (
       {logo && (
         <a
           href="/"
-          class="flex-grow inline-flex items-center justify-center"
+          class=" inline-flex items-center justify-center logo ml-[40px] mt-4"
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >
@@ -236,17 +236,29 @@ const Mobile = (
           />
         </a>
       )}
+        {logoSecondary && (
+        <a
+          href="/"
+          class="inline-flex items-center justify-center ml-[40px] logoSecondary mt-4"
+          style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
+          aria-label="Store logo"
+        >
+          <Image
+            src={logoSecondary.src}
+            alt={logoSecondary.alt}
+            width={logoSecondary.width || 100}
+            height={logoSecondary.height || 13}
+          />
+        </a>
+      )}
+      <div className="sidecontent flex gap-2 items-center">
+        <SignIn />
 
-      <label
-        for={SEARCHBAR_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
-        aria-label="search icon button"
-      >
-        <Icon id="search" />
-      </label>
+        <Bag />
 
-      <Bag />
+      </div>
     </div>
+    <Searchbar {...searchbar} />
   </>
 );
 

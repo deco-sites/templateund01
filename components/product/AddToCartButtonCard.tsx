@@ -130,7 +130,7 @@ function AddToCartButton(props: Props) {
   return (
     <div
       id={id}
-      class="flex"
+      class="flex w-1/2"
       data-item-id={product.productID}
       data-cart-item={encodeURIComponent(
         JSON.stringify({ item, platformProps }),
@@ -140,7 +140,7 @@ function AddToCartButton(props: Props) {
 
       <button
         disabled
-        class={clx("flex-grow px-[12px] py-2 !text-white !bg-[#008081]", _class?.toString())}
+        class={clx("flex-grow  px-[12px] py-2 !text-white !bg-[#008081]", _class?.toString())}
         hx-on:click={useScript(onClick)}
       >
         ADICIONAR <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@ function AddToCartButton(props: Props) {
       </button>
 
       {/* Quantity Input */}
-      <div class="flex-grow !hidden ">
+      <div class="flex-grow !hidden">
         <QuantitySelector
           disabled
           min={0}

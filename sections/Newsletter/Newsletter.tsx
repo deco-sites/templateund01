@@ -52,7 +52,7 @@ function Notice(
   { title, description }: { title?: string; description?: string },
 ) {
   return (
-    <div class="flex flex-col justify-center items-center sm:items-start gap-4">
+    <div class="flex w-full flex-col justify-center items-center sm:items-start gap-4">
       <span class="text-3xl font-semibold text-center sm:text-start">
         {title}
       </span>
@@ -101,19 +101,19 @@ function Newsletter({
   }
 
   return (
-    <Section.Container class="bg-base-200">
-      <div class="p-14 grid grid-flow-row sm:grid-cols-2 gap-10 sm:gap-20 place-items-center">
+    <Section.Container class="bg-[#EFF0F0] mt-8" >
+      <div class="p-8 grid grid-flow-row sm:grid-cols-2 gap-10 sm:gap-20 place-items-center">
         <Notice {...empty} />
 
         <form
           hx-target="closest section"
           hx-swap="outerHTML"
           hx-post={useComponent(import.meta.url)}
-          class="flex flex-col sm:flex-row gap-4 w-full"
+          class="flex flex-col sm:flex-row w-full flex-wrap"
         >
           <input
             name="email"
-            class="input input-bordered flex-grow"
+            class="input border-b-2 rounded-none border-0 bg-transparent outline-none border-[#051232] min-w-[85%] flex-grow mb-4 lg:mr-4 pl-0"
             type="text"
             placeholder={placeholder}
           />
@@ -127,6 +127,10 @@ function Newsletter({
             </span>
             <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
           </button>
+          <label class="flex flex-row gap-3 items-center text-xs">
+            <input type="checkbox" name="checkbox" required class="input-accept" />
+              Declaro que li e aceito com os termos de segurança e privacidade
+          </label>
         </form>
       </div>
     </Section.Container>

@@ -20,8 +20,8 @@ export interface Props {
 
 function Banner({ title, description, images, cta, colorText }: Props) {
   return (
-    <Section.Container class="container">
-      <div class="relative bg-base-200 mx-5 sm:mx-0">
+    <Section.Container class="lg:px-8 px-4">
+      <div class="relative mx-5 sm:mx-0 ">
         <Picture>
           <Source
             media="(max-width: 640px)"
@@ -41,10 +41,10 @@ function Banner({ title, description, images, cta, colorText }: Props) {
         <div
           style={{ color: colorText }}
           class={clx(
-            "absolute left-0 top-0",
+            "relative lg:absolute left-0 top-0 color-mobile",
             "p-5 sm:p-10 md:py-20 md:px-[60px]",
             "flex flex-col",
-            "h-full max-w-full sm:max-w-[33%] md:max-w-[50%] justify-start",
+            "h-full max-w-full md:max-w-[50%] justify-start",
           )}
         >
           {title && (
@@ -52,19 +52,18 @@ function Banner({ title, description, images, cta, colorText }: Props) {
           )}
           {description && (
             <span
-              style={{ color: colorText }}
-              class="font-normal text-sm md:pt-2 pb-2 text-[currentColor]"
+              class="font-normal text-sm md:pt-2 pb-2 text-[currentColor] mb-2"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           )}
           <div class="">
             {cta && (
               <a
-                href={cta.href}
-                class="btn btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 border-transparent hover:border-base-200"
-              >
-                {cta.label}
-              </a>
+              href={cta.href}
+              class="btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit lg:border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 lg:border-transparent lg:hover:border-base-200 max-lg:border max-lg:border-[#051232] px-6 py-3 max-lg:mt-2"
+            >
+              {cta.label}
+            </a>
             )}
           </div>
         </div>

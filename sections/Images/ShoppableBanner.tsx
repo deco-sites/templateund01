@@ -78,7 +78,7 @@ function ShoppableBanner(props: Props) {
   const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div class="container mb-8">
+    <div class="container-custom mb-8">
       <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2">
         <figure class="relative">
           <Picture>

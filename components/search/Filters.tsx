@@ -20,20 +20,20 @@ function ValueItem(
   { url, selected, label, quantity }: FilterToggleValue,
 ) {
   return (
-    <a href={url} rel="nofollow" class="flex items-center gap-2">
-      <div aria-checked={selected} class="checkbox" />
-      <span class="text-sm">{label}</span>
-      {quantity > 0 && <span class="text-sm text-base-400">({quantity})</span>}
+    <a href={url} rel="nofollow" class="flex items-center gap-2 border border-base-200 px-3 py-2 min-w-max h-max">
+      <div aria-checked={selected} class="checkbox hidden" />
+      <span class="text-sm font-medium text-base-200 block w-max">{label}</span>
+      {quantity > 0 && <span class="text-sm text-base-400 hidden">({quantity})</span>}
     </a>
   );
 }
 
 function FilterValues({ key, values }: FilterToggle) {
   const avatars = key === "tamanho" || key === "cor";
-  const flexDirection = avatars ? "flex-row items-center" : "flex-col";
+  const flexDirection = avatars ? "flex-row items-center" : "flex-row";
 
   return (
-    <ul class={clx(`flex flex-wrap gap-2`, flexDirection)}>
+    <ul class={clx(`flex lg:flex-wrap gap-4`, flexDirection)}>
       {values.map((item) => {
         const { url, selected, value } = item;
 
@@ -67,12 +67,12 @@ function FilterValues({ key, values }: FilterToggle) {
 
 function Filters({ filters }: Props) {
   return (
-    <ul class="flex flex-col gap-6 p-4 sm:p-0">
+    <ul class="flex flex-row gap-4 p-4 sm:p-0 max-lg:pl-0 max-lg:pt-0 overflow-auto">
       {filters
         .filter(isToggle)
         .map((filter) => (
-          <li class="flex flex-col gap-4">
-            <span>{filter.label}</span>
+          <li class="flex  flex-row gap-4">
+            <span class="hidden">{filter.label}</span>
             <FilterValues {...filter} />
           </li>
         ))}

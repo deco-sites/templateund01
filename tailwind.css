@@ -7,8 +7,13 @@
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
+    overflow-x: hidden;
+    
   }
-
+ 
+  input.accept{
+    background: transparent !important;
+  }
   /** Remove default styles from input[type=number] */
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
@@ -24,15 +29,21 @@
   }
 }
 .container-custom{
-  margin: 0 16px;
+  padding: 0 16px;
 }
 
+@media screen and (max-width: 1024px) {
+  .color-mobile{
+    color: #051232 !important;
+  }
+}
 @media screen and (min-width: 1055px) {
   .container-custom{
-    margin: 0 32px;
+    padding: 0 32px;
   }
   
 }
+
 input{
   outline: none !important;
 }

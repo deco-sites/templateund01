@@ -8,7 +8,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
-import AddToCartButton from "./AddToCartButton.tsx";
+import AddToCartButton from "./AddToCartButtonCard.tsx";
 import { Ring } from "./ProductVariantSelector.tsx";
 import { useId } from "../../sdk/useId.ts";
 
@@ -79,9 +79,9 @@ function ProductCard({
     >
       <figure
         class={clx(
-          "relative bg-base-200",
-          "rounded border border-transparent",
-          "group-hover:border-primary",
+          "relative bg-white",
+          "border-transparent",
+          "rounded-none",
         )}
         style={{ aspectRatio: ASPECT_RATIO }}
       >
@@ -104,7 +104,7 @@ function ProductCard({
             style={{ aspectRatio: ASPECT_RATIO }}
             class={clx(
               "object-cover",
-              "rounded w-full",
+              "w-full",
               "col-span-full row-span-full",
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
@@ -120,7 +120,7 @@ function ProductCard({
             style={{ aspectRatio: ASPECT_RATIO }}
             class={clx(
               "object-cover",
-              "rounded w-full",
+              "w-full",
               "col-span-full row-span-full",
               "transition-opacity opacity-0 lg:group-hover:opacity-100",
             )}
@@ -158,18 +158,18 @@ function ProductCard({
         </div>
       </figure>
 
-      <a href={relativeUrl} class="pt-5">
-        <span class="font-medium">
+      <a href={relativeUrl} class="pt-4">
+        <span class="font-medium text-sm text-base-200">
           {title}
         </span>
 
-        <div class="flex gap-2 pt-2">
+        <div class="flex gap-2 pt-2 mb-4">
           {listPrice && (
-            <span class="line-through font-normal text-gray-400">
+            <span class="line-through font-normal text-base-200 ">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-medium text-base-400">
+          <span class="font-bold text-base text-primary">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
@@ -177,7 +177,7 @@ function ProductCard({
 
       {/* SKU Selector */}
       {variants.length > 1 && firstVariantName !== shoeSizeVariant && (
-        <ul class="flex items-center justify-start gap-2 pt-4 pb-1 pl-1 overflow-x-auto">
+        <ul class="flex items-center justify-start gap-2 pt-4 pb-1 pl-1 overflow-x-auto !hidden">
           {variants.map(([value, link]) => [value, relative(link)] as const)
             .map(([value, link]) => (
               <li>
@@ -197,7 +197,18 @@ function ProductCard({
 
       <div class="flex-grow" />
 
-      <div>
+      <div class="flex flex-row justify-between items-center gap-4">
+        <div class="px-[12px] w-1/2 py-2 border border-base-200 max-h-[36px]">
+          <a href={relativeUrl} class="flex justify-between items-center">
+            DETALHES 
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 4.16699V15.8337" stroke="#051232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4.16663 10H15.8333" stroke="#051232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+
+          </a>
+        </div>
         {inStock
           ? (
             <AddToCartButton
@@ -206,10 +217,10 @@ function ProductCard({
               item={item}
               class={clx(
                 "btn",
-                "btn-outline justify-start border-none !text-sm !font-medium px-0 no-animation w-full",
-                "hover:!bg-transparent",
+                "btn-outline !min-h-[36px] w-1/2 !max-h-[36px] justify-center border-none rounded-none !text-sm !font-medium px-0 no-animation w-full",
+                "",
                 "disabled:!bg-transparent disabled:!opacity-50",
-                "btn-primary hover:!text-primary disabled:!text-primary",
+                "btn-primary disabled:!text-primary",
               )}
             />
           )
@@ -224,9 +235,10 @@ function ProductCard({
                 "btn-error hover:!text-error disabled:!text-error",
               )}
             >
-              Sold out
+              Esgotado
             </a>
           )}
+
       </div>
     </div>
   );

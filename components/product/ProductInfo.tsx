@@ -14,7 +14,10 @@ import ProductSelector from "./ProductVariantSelector.tsx";
 interface Props {
   page: ProductDetailsPage | null;
 }
-
+function truncateDescription(description: string, maxLength: number) {
+  if (description.length <= maxLength) return description;
+  return `${description.substring(0, maxLength)}...`;
+}
 function ProductInfo({ page }: Props) {
   const id = useId();
 
@@ -71,12 +74,12 @@ function ProductInfo({ page }: Props) {
   ) ?? false;
 
   return (
-    <div {...viewItemEvent} class="flex flex-col" id={id}>
+    <div {...viewItemEvent} class="flex flex-col scroll-smooth" id={id}>
       {/* Price tag */}
       <span
         class={clx(
-          "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
-          percent < 1 && "opacity-0",
+          "text-sm/4 font-normal text-black bg-base-200 bg-opacity-15 text-center rounded-badge px-2 py-1",
+          percent < 1 && "hidden",
           "w-fit",
         )}
       >
@@ -84,20 +87,33 @@ function ProductInfo({ page }: Props) {
       </span>
 
       {/* Product Name */}
-      <span class={clx("text-3xl font-semibold", "pt-4")}>
+      <span class={clx("font-normal", "pt-0 text-base-200 text-[28px]")}>
         {title}
       </span>
 
       {/* Prices */}
       <div class="flex gap-3 pt-1">
-        <span class="text-3xl font-semibold text-base-400">
+        <span class="text-base font-bold text-[#008081]">
           {formatPrice(price, offers?.priceCurrency)}
         </span>
-        <span class="line-through text-sm font-medium text-gray-400">
+        <span class="line-through text-base-200 font-normal">
           {formatPrice(listPrice, offers?.priceCurrency)}
         </span>
       </div>
-
+      <div class="mt-4 sm:mt-6">
+        <span class="text-sm">
+          {description && (
+            <div class="mt-2">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: truncateDescription(description, 140),
+                }}
+              />
+              <a href="#more-info" class="text-base-200 underline scroll-smooth">Mais informações</a>
+            </div>
+          )}
+        </span>
+      </div>
       {/* Sku Selector */}
       {hasValidVariants && (
         <div className="mt-4 sm:mt-8">
@@ -131,11 +147,11 @@ function ProductInfo({ page }: Props) {
       </div>
 
       {/* Description card */}
-      <div class="mt-4 sm:mt-6">
+      <div class="mt-4 sm:mt-6 " >
         <span class="text-sm">
           {description && (
-            <details>
-              <summary class="cursor-pointer">Description</summary>
+            <details class="aparence-none">
+              <summary class="cursor-pointer" id="more-info">DESCRIÇÃO </summary>
               <div
                 class="ml-2 mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}

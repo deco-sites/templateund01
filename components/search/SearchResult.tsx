@@ -11,8 +11,8 @@ import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Breadcrumb from "../ui/Breadcrumb.tsx";
-import Drawer from "../ui/Drawer.tsx";
-import Sort from "./Sort.tsx";
+// import Drawer from "../ui/Drawer.tsx";
+import SortMobile from "./SortMobile.tsx";
 import { useDevice } from "deco/hooks/useDevice.ts";
 
 export interface Layout {
@@ -107,9 +107,9 @@ function PageResult(props: SectionProps<typeof loader>) {
         data-product-list
         class={clx(
           "grid items-center",
-          "grid-cols-2 gap-2",
-          "sm:grid-cols-4 sm:gap-10",
-          "w-full",
+          "grid-cols-1 gap-2",
+          "xl:grid-cols-4 sm:gap-4",
+          "w-full md:grid-cols-3 sm:grid-cols-2",
         )}
       >
         {products?.map((product, index) => (
@@ -118,7 +118,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             product={product}
             preload={index === 0}
             index={offset + index}
-            class="h-full min-w-[160px] max-w-[300px]"
+            class="h-full min-w-[160px]"
           />
         ))}
       </div>
@@ -204,7 +204,7 @@ const setPageQuerystring = (page: string, id: string) => {
 
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
-  const controls = useId();
+  // const controls = useId();
   const device = useDevice();
 
   const { startingPage = 0, url, partial } = props;
@@ -235,13 +235,16 @@ function Result(props: SectionProps<typeof loader>) {
   });
 
   const results = (
-    <span class="text-sm font-normal">
-      {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
+    <span class="text-sm font-normal text-base-200">
+       {page.pageInfo.records} produtos
     </span>
   );
 
-  const sortBy = sortOptions.length > 0 && (
-    <Sort sortOptions={sortOptions} url={url} />
+  // const sortBy = sortOptions.length > 0 && (
+  //   <Sort sortOptions={sortOptions} url={url} />
+  // );
+  const sortByMob = sortOptions.length > 0 && (
+    <SortMobile sortOptions={sortOptions} url={url} />
   );
 
   return (
@@ -250,61 +253,69 @@ function Result(props: SectionProps<typeof loader>) {
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-12 sm:py-16 px-5 sm:px-0">
+            <div class="container-custom mt-5 max-lg:mt-[150px] flex flex-col gap-4 sm:gap-5 w-full py-12 sm:py-16">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
-
               {device === "mobile" && (
-                <Drawer
-                  id={controls}
-                  aside={
-                    <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden">
-                      <div class="flex justify-between items-center">
-                        <h1 class="px-4 py-3">
-                          <span class="font-medium text-2xl">Filters</span>
-                        </h1>
-                        <label class="btn btn-ghost" for={controls}>
-                          <Icon id="close" />
-                        </label>
-                      </div>
-                      <div class="flex-grow overflow-auto">
-                        <Filters filters={filters} />
-                      </div>
-                    </div>
-                  }
-                >
-                  <div class="flex sm:hidden justify-between items-end">
-                    <div class="flex flex-col">
-                      {results}
-                      {sortBy}
-                    </div>
-
-                    <label class="btn btn-ghost" for={controls}>
-                      Filters
-                    </label>
+                
+                <div class="place-self-start flex flex-col lg:flex-row gap-2 w-full">
+                <span class="text-base text-base-200">
+                  TODOS OS PRODUTOS
+                </span>
+                 <span class="text-base font-semibold h-12 flex items-center">
+                 {results}
+                 </span>
+                 <hr class="w-full bg-base-200 block lg:hidden" />
+                 
+               </div>
+              )}
+              {device === "mobile" && (
+                
+                <div class="place-self-start flex flex-col lg:flex-row gap-2 w-full">
+                  <div>
+                    {sortByMob}
                   </div>
-                </Drawer>
+
+                 
+               </div>
+              )}
+              {device === "mobile" && (
+                
+                <aside class="place-self-start flex flex-col lg:flex-row gap-2 w-full">
+                 <span class="text-base font-semibold h-12 flex items-center">
+                   Filtros:
+                 </span>
+
+                 <Filters filters={filters} />
+               </aside>
               )}
 
-              <div class="grid place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
+              <div class="flex flex-col place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
                 {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col gap-9">
+                    <div class="flex justify-between items-center w-full">
+                      <div class="flex flex-col">
+                        <span class="text-[32px] text-base-200">
+                          TODOS OS PRODUTOS
+                        </span>
+                        {results}
+
+                      </div>
+                      <div>
+                        {sortByMob}
+                      </div>
+                    </div>
+                  )}
+                
+
+                <div class="flex flex-col gap-9 w-full">
+                {device === "desktop" && (
+                  <aside class="place-self-start flex flex-col lg:flex-row gap-9 w-full">
                     <span class="text-base font-semibold h-12 flex items-center">
-                      Filters
+                      Filtros:
                     </span>
 
                     <Filters filters={filters} />
                   </aside>
                 )}
-
-                <div class="flex flex-col gap-9">
-                  {device === "desktop" && (
-                    <div class="flex justify-between items-center">
-                      {results}
-                      <div>
-                        {sortBy}
-                      </div>
-                    </div>
-                  )}
                   <PageResult {...props} />
                 </div>
               </div>

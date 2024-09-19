@@ -27,7 +27,7 @@ function Banner(
   { title, description, mobile, desktop, cta, colorText }: Banner,
 ) {
   return (
-    <div class="relative mx-5 sm:mx-0">
+    <div class="relative sm:mx-0">
       <Picture>
         <Source
           media="(max-width: 640px)"
@@ -47,10 +47,10 @@ function Banner(
       <div
         style={{ color: colorText }}
         class={clx(
-          "absolute left-0 top-0",
-          "p-5 sm:p-10 md:py-20 md:px-[60px]",
+          "relative lg:absolute left-0 top-0 color-mobile",
+          "lg:py-20 lg:px-[60px] px-6 py-[18.5px]",
           "flex flex-col",
-          "h-full max-w-full sm:max-w-[33%] md:max-w-[50%] justify-start",
+          "h-full max-w-full md:max-w-[50%] justify-start",
         )}
       >
         {title && (
@@ -58,7 +58,7 @@ function Banner(
         )}
         {description && (
           <span
-            class="font-normal text-sm md:pt-2 pb-2"
+            class="font-normal text-sm md:pt-2 pb-2 mb-2"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         )}
@@ -66,7 +66,7 @@ function Banner(
           {cta && (
             <a
               href={cta.href}
-              class="btn btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 border-transparent hover:border-base-200"
+              class="btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit lg:border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 lg:border-transparent lg:hover:border-base-200 max-lg:border max-lg:border-[#051232] px-6 py-3 max-lg:mt-2"
             >
               {cta.label}
             </a>
@@ -107,8 +107,8 @@ function BannerSideSide({
   ],
 }: Props) {
   return (
-    <Section.Container class="py-8 sm:py-8">
-      <ul class="grid gap-2 sm:gap-4 grid-cols-1 sm:grid-cols-2 px-5 sm:px-0">
+    <Section.Container class="py-8 sm:py-8 ">
+      <ul class="grid gap-2 sm:gap-4 grid-cols-1 sm:grid-cols-2 sm:px-0 container-custom">
         {banners.map((item, index) => (
           <li key={index}>
             <Banner {...item} />

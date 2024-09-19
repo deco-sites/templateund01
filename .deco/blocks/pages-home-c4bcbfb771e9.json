@@ -178,7 +178,7 @@
         },
         "images": {
           "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/2d7fd389-574f-4887-8574-bd77e75fcb52/top-aerial-drone-view-woman-swimsuit-bikini-relaxing-sunbathing-beach-(1)-1.png",
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/5783b9d2-533e-45c5-8638-3bbf4dc6dbc8/top-aerial-drone-view-woman-swimsuit-bikini-relaxing-sunbathing-beach-(1)-1.png"
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/1477cac2-dca6-4c47-a411-d345fcaaac59/Mask-group.png"
         },
         "colorText": "#f2f2f2",
         "description": "descrição"
@@ -215,19 +215,18 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
-        "label": "Sign up",
-        "placeholder": "Email address",
+        "label": "cadastrar",
+        "placeholder": "email@email.com.br",
         "empty": {
-          "title": "Get top deals, latest trends, and more.",
-          "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+          "title": "Cadastre-se para receber ofertas e descontos exclusivos"
         },
         "success": {
-          "title": "Thank you for subscribing!",
-          "description": "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!"
+          "title": "Enviado com sucesso!",
+          "description": "Logo receberá nossas novidades"
         },
         "failed": {
-          "title": "Oops!. Something went wrong!",
-          "description": "Something went wrong. Please try again. If the problem persists, please contact us."
+          "title": "Ops falha ao enviar...",
+          "description": "Algo deu errado, tente novamente, se persistir entre em contato conosco."
         }
       }
     },
