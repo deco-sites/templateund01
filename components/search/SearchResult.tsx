@@ -236,7 +236,7 @@ function Result(props: SectionProps<typeof loader>) {
 
   const results = (
     <span class="text-sm font-normal text-base-200">
-       {page.pageInfo.records} produtos
+      {page.pageInfo.records} produtos
     </span>
   );
 
@@ -256,66 +256,58 @@ function Result(props: SectionProps<typeof loader>) {
             <div class="container-custom mt-5 max-lg:mt-[150px] flex flex-col gap-4 sm:gap-5 w-full py-12 sm:py-16">
               <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
               {device === "mobile" && (
-                
                 <div class="place-self-start flex flex-col lg:flex-row gap-2 w-full">
-                <span class="text-base text-base-200">
-                  TODOS OS PRODUTOS
-                </span>
-                 <span class="text-base font-semibold h-12 flex items-center">
-                 {results}
-                 </span>
-                 <hr class="w-full bg-base-200 block lg:hidden" />
-                 
-               </div>
+                  <span class="text-base text-base-200">
+                    TODOS OS PRODUTOS
+                  </span>
+                  <span class="text-base font-semibold h-12 flex items-center">
+                    {results}
+                  </span>
+                  <hr class="w-full bg-base-200 block lg:hidden" />
+                </div>
               )}
               {device === "mobile" && (
-                
                 <div class="place-self-start flex flex-col lg:flex-row gap-2 w-full">
                   <div>
                     {sortByMob}
                   </div>
-
-                 
-               </div>
+                </div>
               )}
               {device === "mobile" && (
-                
                 <aside class="place-self-start flex flex-col lg:flex-row gap-2 w-full">
-                 <span class="text-base font-semibold h-12 flex items-center">
-                   Filtros:
-                 </span>
+                  <span class="text-base font-semibold h-12 flex items-center">
+                    Filtros:
+                  </span>
 
-                 <Filters filters={filters} />
-               </aside>
+                  <Filters filters={filters} />
+                </aside>
               )}
 
               <div class="flex flex-col place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
                 {device === "desktop" && (
-                    <div class="flex justify-between items-center w-full">
-                      <div class="flex flex-col">
-                        <span class="text-[32px] text-base-200">
-                          TODOS OS PRODUTOS
-                        </span>
-                        {results}
-
-                      </div>
-                      <div>
-                        {sortByMob}
-                      </div>
+                  <div class="flex justify-between items-center w-full">
+                    <div class="flex flex-col">
+                      <span class="text-[32px] text-base-200">
+                        TODOS OS PRODUTOS
+                      </span>
+                      {results}
                     </div>
-                  )}
-                
+                    <div>
+                      {sortByMob}
+                    </div>
+                  </div>
+                )}
 
                 <div class="flex flex-col gap-9 w-full">
-                {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col lg:flex-row gap-9 w-full">
-                    <span class="text-base font-semibold h-12 flex items-center">
-                      Filtros:
-                    </span>
+                  {device === "desktop" && (
+                    <aside class="place-self-start flex flex-col lg:flex-row gap-9 w-full">
+                      <span class="text-base font-semibold h-12 flex items-center">
+                        Filtros:
+                      </span>
 
-                    <Filters filters={filters} />
-                  </aside>
-                )}
+                      <Filters filters={filters} />
+                    </aside>
+                  )}
                   <PageResult {...props} />
                 </div>
               </div>

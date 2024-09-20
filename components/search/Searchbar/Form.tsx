@@ -97,7 +97,7 @@ export default function Searchbar(
           <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
           <Icon id="search" class="inline [.htmx-request_&]:hidden" />
         </button>
-        <input   
+        <input
           tabIndex={0}
           class="input border-0 join-item text-[currentColor] outline-[none] flex-grow bg-transparent text-[16px]"
           name={NAME}

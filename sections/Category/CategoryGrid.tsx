@@ -25,32 +25,34 @@ function Card({ image, href, label, text }: Item) {
   return (
     <a href={href} class="flex flex-col items-center justify-center gap-4">
       <div class="lg:w-full lg:h-auto sm:w-full sm:h-auto w-24 h-24 rounded-full flex justify-center items-center contrast">
-      {device === "desktop"
-        ? (
-          <Image
-          src={image}
-          alt={label}
-          width={300}
-          height={300}
-          loading="lazy"
-        />
-        )
-        : (
-          <Image
+        {device === "desktop"
+          ? (
+            <Image
+              src={image}
+              alt={label}
+              width={300}
+              height={300}
+              loading="lazy"
+            />
+          )
+          : (
+            <Image
+              src={image}
+              alt={label}
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+          )}
+        {
+          /* <Image
           src={image}
           alt={label}
           width={200}
           height={200}
           loading="lazy"
-        />
-        )}
-        {/* <Image
-          src={image}
-          alt={label}
-          width={200}
-          height={200}
-          loading="lazy"
-        /> */}
+        /> */
+        }
       </div>
       <span className="font-medium text-sm uppercase text-base-200">
         {text}

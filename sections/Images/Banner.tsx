@@ -59,11 +59,11 @@ function Banner({ title, description, images, cta, colorText }: Props) {
           <div class="">
             {cta && (
               <a
-              href={cta.href}
-              class="btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit lg:border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 lg:border-transparent lg:hover:border-base-200 max-lg:border max-lg:border-[#051232] px-6 py-3 max-lg:mt-2"
-            >
-              {cta.label}
-            </a>
+                href={cta.href}
+                class="btn-primary rounded-none bg-white hover:bg-transparent no-animatio w-fit lg:border-0 min-w-[180px] text-base-200 text-sm uppercase border-2 lg:border-transparent lg:hover:border-base-200 max-lg:border max-lg:border-[#051232] px-6 py-3 max-lg:mt-2"
+              >
+                {cta.label}
+              </a>
             )}
           </div>
         </div>

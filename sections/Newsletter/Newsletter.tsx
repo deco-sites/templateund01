@@ -101,7 +101,7 @@ function Newsletter({
   }
 
   return (
-    <Section.Container class="bg-[#EFF0F0] mt-8" >
+    <Section.Container class="bg-[#EFF0F0] mt-8">
       <div class="p-8 grid grid-flow-row sm:grid-cols-2 gap-10 sm:gap-20 place-items-center">
         <Notice {...empty} />
 
@@ -128,8 +128,13 @@ function Newsletter({
             <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
           </button>
           <label class="flex flex-row gap-3 items-center text-xs">
-            <input type="checkbox" name="checkbox" required class="input-accept" />
-              Declaro que li e aceito com os termos de segurança e privacidade
+            <input
+              type="checkbox"
+              name="checkbox"
+              required
+              class="input-accept"
+            />
+            Declaro que li e aceito com os termos de segurança e privacidade
           </label>
         </form>
       </div>

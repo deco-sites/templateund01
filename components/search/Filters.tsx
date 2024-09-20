@@ -20,10 +20,16 @@ function ValueItem(
   { url, selected, label, quantity }: FilterToggleValue,
 ) {
   return (
-    <a href={url} rel="nofollow" class="flex items-center gap-2 border border-base-200 px-3 py-2 min-w-max h-max">
+    <a
+      href={url}
+      rel="nofollow"
+      class="flex items-center gap-2 border border-base-200 px-3 py-2 min-w-max h-max"
+    >
       <div aria-checked={selected} class="checkbox hidden" />
       <span class="text-sm font-medium text-base-200 block w-max">{label}</span>
-      {quantity > 0 && <span class="text-sm text-base-400 hidden">({quantity})</span>}
+      {quantity > 0 && (
+        <span class="text-sm text-base-400 hidden">({quantity})</span>
+      )}
     </a>
   );
 }

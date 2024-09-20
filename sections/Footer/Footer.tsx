@@ -66,7 +66,7 @@ function Footer({
         </ul>
         <hr class="w-full text-base-400 hidden lg:block" />
         <div class="flex flex-col sm:flex-row gap-12 justify-between items-start items-center">
-        <div class="flex flex-wrap gap-2 items-center">
+          <div class="flex flex-wrap gap-2 items-center">
             <span class="text-xs font-normal">
               Pague com
             </span>
@@ -84,9 +84,9 @@ function Footer({
               ))}
             </ul>
           </div>
-        <div class="flex flex-wrap gap-2 items-center">
+          <div class="flex flex-wrap gap-2 items-center">
             <span class="text-xs font-normal">
-            Redes Sociais:
+              Redes Sociais:
             </span>
             <ul class="flex gap-4">
               {social.map(({ image, href, alt }) => (
@@ -112,7 +112,8 @@ function Footer({
               {seals.map(({ image, href, alt }) => (
                 <li class="h-[52px] w-fit">
                   <a href={href}>
-                    <Image class="h-[52px] object-contain w-auto"
+                    <Image
+                      class="h-[52px] object-contain w-auto"
                       src={image}
                       alt={alt}
                       loading="lazy"
@@ -124,13 +125,11 @@ function Footer({
               ))}
             </ul>
           </div>
-          
         </div>
 
-        
-
         <div class="grid grid-flow-row sm:grid-flow-col gap-8">
-          {/* <ul class="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center">
+          {
+            /* <ul class="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center">
             {policies.map(({ title, href }) => (
               <li>
                 <a class="text-xs font-medium" href={href}>
@@ -138,12 +137,15 @@ function Footer({
                 </a>
               </li>
             ))}
-          </ul> */}
+          </ul> */
+          }
 
           <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
-            {/* <div>
+            {
+              /* <div>
               <img loading="lazy" src={logo} />
-            </div> */}
+            </div> */
+            }
             <span class="text-xs font-medium text-white">{trademark}</span>
           </div>
 

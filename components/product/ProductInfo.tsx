@@ -109,7 +109,12 @@ function ProductInfo({ page }: Props) {
                   __html: truncateDescription(description, 140),
                 }}
               />
-              <a href="#more-info" class="text-base-200 underline scroll-smooth">Mais informações</a>
+              <a
+                href="#more-info"
+                class="text-base-200 underline scroll-smooth"
+              >
+                Mais informações
+              </a>
             </div>
           )}
         </span>
@@ -147,11 +152,11 @@ function ProductInfo({ page }: Props) {
       </div>
 
       {/* Description card */}
-      <div class="mt-4 sm:mt-6 " >
+      <div class="mt-4 sm:mt-6 ">
         <span class="text-sm">
           {description && (
             <details class="aparence-none">
-              <summary class="cursor-pointer" id="more-info">DESCRIÇÃO </summary>
+              <summary class="cursor-pointer" id="more-info">DESCRIÇÃO</summary>
               <div
                 class="ml-2 mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}

@@ -200,13 +200,29 @@ function ProductCard({
       <div class="flex flex-row justify-between items-center gap-4">
         <div class="px-[12px] w-1/2 py-2 border border-base-200 max-h-[36px]">
           <a href={relativeUrl} class="flex justify-between items-center">
-            DETALHES 
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 4.16699V15.8337" stroke="#051232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M4.16663 10H15.8333" stroke="#051232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            DETALHES
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 4.16699V15.8337"
+                stroke="#051232"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M4.16663 10H15.8333"
+                stroke="#051232"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
-
-
           </a>
         </div>
         {inStock
@@ -238,7 +254,6 @@ function ProductCard({
               Esgotado
             </a>
           )}
-
       </div>
     </div>
   );

@@ -170,7 +170,8 @@ const Mobile = (
   { logo, searchbar, navItems, loading, logoSecondary }: Props,
 ) => (
   <>
-    {/* <Drawer
+    {
+      /* <Drawer
       id={SEARCHBAR_DRAWER_ID}
       aside={
         <Drawer.Aside title="Search" drawer={SEARCHBAR_DRAWER_ID}>
@@ -185,7 +186,8 @@ const Mobile = (
           </div>
         </Drawer.Aside>
       }
-    /> */}
+    /> */
+    }
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
@@ -236,7 +238,7 @@ const Mobile = (
           />
         </a>
       )}
-        {logoSecondary && (
+      {logoSecondary && (
         <a
           href="/"
           class="inline-flex items-center justify-center ml-[40px] logoSecondary mt-4"
@@ -255,7 +257,6 @@ const Mobile = (
         <SignIn />
 
         <Bag />
-
       </div>
     </div>
     <Searchbar {...searchbar} />
