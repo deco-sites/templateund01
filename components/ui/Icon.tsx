@@ -21,6 +21,9 @@ export type AvailableIcons =
   | "FacebookOutline"
   | "check-circle"
   | "error"
+  | "facebook"
+  | "instagram"
+  | "twitter"
   | "trash";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

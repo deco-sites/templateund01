@@ -5,14 +5,14 @@ import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-
+import Share from "./Share.tsx";
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
 }
 
 const WIDTH = 820;
-const HEIGHT = 615;
+const HEIGHT = 820;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 /**
@@ -71,23 +71,29 @@ export default function GallerySlider(props: Props) {
             </Slider>
 
             <Slider.PrevButton
-              class="no-animation absolute left-2 top-1/2 btn btn-circle btn-outline disabled:invisible"
+              class="no-animation absolute !border-0 lg:left-2 max-lg:left-auto max-lg:right-[60px] top-auto max-lg:bottom-[-50px] lg:top-1/2 btn btn-circle btn-outline disabled:opacity-70 z-20 text-[#008081]"
               disabled
             >
               <Icon id="chevron-right" class="rotate-180" />
             </Slider.PrevButton>
 
             <Slider.NextButton
-              class="no-animation absolute right-2 top-1/2 btn btn-circle btn-outline disabled:invisible"
+              class="no-animation !border-0 absolute right-1 top-auto max-lg:bottom-[-50px] lg:top-1/2 btn btn-circle btn-outline disabled:opacity-70 z-20 text-[#008081]"
               disabled={images.length < 2}
             >
               <Icon id="chevron-right" />
             </Slider.NextButton>
 
-            <div class="absolute top-2 right-2 bg-base-100 rounded-full">
-              <label class="btn btn-ghost hidden sm:inline-flex" for={zoomId}>
-                <Icon id="pan_zoom" />
+            <div class="absolute top-0 right-0 z-10 !bg-transparet h-[90%] w-full rounded-full">
+              <label class="btn !bg-transparent btn-ghost hidden sm:inline-flex w-full h-full" for={zoomId}>
+                <Icon id="pan_zoom" class="hidden" />
               </label>
+            </div>
+            
+            {/* share */}
+            <div class="flex justify-between items-center mt-[25px] max-lg:hidden">
+              <Share />
+              <span class="flex gap-2 items-center text-sm text-base-200 max-lg:hidden"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#051232" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 17.5L13.875 13.875" stroke="#051232" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9H6" stroke="#051232" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12V6" stroke="#051232" stroke-width="1.5" stroke-linecap="round"/></svg>Clique nas imagens para ampliá-las</span>
             </div>
           </div>
         </div>
@@ -106,11 +112,11 @@ export default function GallerySlider(props: Props) {
             style={{ maxHeight: "600px" }}
           >
             {images.map((img, index) => (
-              <li class="carousel-item w-16 h-16">
-                <Slider.Dot index={index}>
+              <li class="carousel-item lg:w-16 lg:h-16 w-1.5 h-1.5 max-lg:border max-lg:rounded-full max-lg:border-base-200 group-disabled:bg-base-200">
+                <Slider.Dot index={index} class="group-disabled:bg-base-200">
                   <Image
                     style={{ aspectRatio: "1 / 1" }}
-                    class="group-disabled:border-base-400 border rounded object-cover w-full h-full"
+                    class="group-disabled:border-base-400 border rounded object-cover w-full h-full group-disabled:bg-base-200 max-lg:invisible"
                     width={64}
                     height={64}
                     src={img.url!}

@@ -30,16 +30,16 @@ const useStyles = (value: string, checked: boolean) => {
       "border border-base-300 rounded-full",
       "w-12 h-12 block",
       "border border-[#C9CFCF] rounded-full",
-      "ring-2 ring-offset-2",
+      "",
       checked ? "ring-text-200" : "ring-transparent",
     );
   }
 
   return clx(
     "btn btn-ghost border-[#C9CFCF] hover:bg-base-200 hover:text-white hover:border-[#C9CFCF] w-12 h-12",
-    "ring-2 ring-offset-2",
+    "",
     checked
-      ? "ring-base-200 bg-base-200 text-white"
+      ? "bg-base-200 text-white"
       : "ring-transparent border-base-200 text-base-200",
   );
 };
