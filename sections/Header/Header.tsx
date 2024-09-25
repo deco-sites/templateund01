@@ -287,14 +287,14 @@ function Header({
   return (
     <>
       <HeaderScroll
-        className={`fixed z-50 w-full h-full`}
+        className={`fixed z-[30] w-full h-full`}
         style={{
           height: device === "desktop"
             ? HEADER_HEIGHT_DESKTOP
             : HEADER_HEIGHT_MOBILE,
         }}
       >
-        <div class="w-full z-50 h-full">
+        <div class="w-full z-[30] h-full">
           {alerts.length > 0 && <Alert alerts={alerts} />}
           {device === "desktop"
             ? <Desktop logo={logo} {...props} />
