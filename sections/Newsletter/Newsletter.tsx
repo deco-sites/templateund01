@@ -128,7 +128,6 @@ function Newsletter({
               </span>
               <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
             </button>
-
           </fieldset>
           <label class="flex flex-row gap-3 items-center text-xs mt-4">
             <input

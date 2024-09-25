@@ -1,4 +1,4 @@
-import { type ImageWidget, type HTMLWidget } from "apps/admin/widgets.ts";
+import { type HTMLWidget, type ImageWidget } from "apps/admin/widgets.ts";
 import { Picture, Source } from "apps/website/components/Picture.tsx";
 import Section from "../../components/ui/Section.tsx";
 
@@ -31,9 +31,9 @@ export interface Props {
   };
   text?: {
     /**
-   * @title Content
-   * @format rich-text
-   */
+     * @title Content
+     * @format rich-text
+     */
     content?: HTMLWidget;
     layout?: {
       position?: "text-center" | "text-left" | "text-right";
@@ -62,7 +62,7 @@ const DEFAULT_PROPS: Props = {
     top: "",
     bottom: "",
     left: "",
-    right: ""
+    right: "",
   },
   imageRight: {
     mobile:
@@ -71,19 +71,27 @@ const DEFAULT_PROPS: Props = {
     top: "",
     bottom: "",
     left: "",
-    right: ""
+    right: "",
   },
 };
 
 function ShoppableBanner(props: Props) {
-  const { background, text, title, imageLeft, imageRight } = { ...DEFAULT_PROPS, ...props };
-   // Desestruturando as variáveis corretamente
+  const { background, text, title, imageLeft, imageRight } = {
+    ...DEFAULT_PROPS,
+    ...props,
+  };
+  // Desestruturando as variáveis corretamente
 
   return (
     <div class="container-custom mb-8">
-      <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2" style={{ backgroundColor: background }}>
+      <div
+        class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2"
+        style={{ backgroundColor: background }}
+      >
         <div className="relative flex justify-center items-center px-12 py-12">
-          <h2 class={`card-title text-[32px]  max-w-[440px] z-20 flex ${title?.layout?.position}`}>
+          <h2
+            class={`card-title text-[32px]  max-w-[440px] z-20 flex ${title?.layout?.position}`}
+          >
             {title?.content}
           </h2>
 
@@ -97,17 +105,19 @@ function ShoppableBanner(props: Props) {
               />
               <Source
                 media="(min-width: 768px)"
-                src={imageLeft?.desktop ? imageLeft?.desktop : imageLeft?.mobile}
+                src={imageLeft?.desktop
+                  ? imageLeft?.desktop
+                  : imageLeft?.mobile}
                 width={177}
                 height={177}
               />
               <img
                 class={`object-cover absolute`}
                 style={{
-                  top: imageLeft?.top || 'auto',
-                  bottom: imageLeft?.bottom || 'auto',
-                  left: imageLeft?.left || 'auto',
-                  right: imageLeft?.right || 'auto',
+                  top: imageLeft?.top || "auto",
+                  bottom: imageLeft?.bottom || "auto",
+                  left: imageLeft?.left || "auto",
+                  right: imageLeft?.right || "auto",
                 }}
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={imageLeft?.mobile}
@@ -125,17 +135,19 @@ function ShoppableBanner(props: Props) {
               />
               <Source
                 media="(min-width: 768px)"
-                src={imageRight?.desktop ? imageRight?.desktop : imageRight?.mobile}
+                src={imageRight?.desktop
+                  ? imageRight?.desktop
+                  : imageRight?.mobile}
                 width={177}
                 height={177}
               />
               <img
                 class={`object-cover absolute`}
                 style={{
-                  top: imageRight?.top || 'auto',
-                  bottom: imageRight?.bottom || 'auto',
-                  left: imageRight?.left || 'auto',
-                  right: imageRight?.right || 'auto',
+                  top: imageRight?.top || "auto",
+                  bottom: imageRight?.bottom || "auto",
+                  left: imageRight?.left || "auto",
+                  right: imageRight?.right || "auto",
                 }}
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={imageRight?.mobile}
@@ -146,16 +158,18 @@ function ShoppableBanner(props: Props) {
             </Picture>
           </figure>
         </div>
-        
-        <div class="flex flex-col bg-[#EEEAE5] justify-center gap-6  px-12 py-12">     
-        {text && (
+
+        <div class="flex flex-col bg-[#EEEAE5] justify-center gap-6  px-12 py-12">
+          {text && (
             <>
-              {/* <p class={`text-base-200 ${text?.layout?.position}`}>
+              {
+                /* <p class={`text-base-200 ${text?.layout?.position}`}>
                 {text?.content}
-              </p> */}
+              </p> */
+              }
               {text?.content && (
                 <span
-                class={`text-base-200 custom-p text-sm ${text?.layout?.position}`}
+                  class={`text-base-200 custom-p text-sm ${text?.layout?.position}`}
                   dangerouslySetInnerHTML={{ __html: text.content }}
                 />
               )}

@@ -18,10 +18,18 @@ export interface Props {
   };
 }
 
-function Banner({ description, images, cta, colorText, imageBackground, colorBackground }: Props) {
+function Banner(
+  { description, images, cta, colorText, imageBackground, colorBackground }:
+    Props,
+) {
   return (
-    <Section.Container class="lg:px-8 lg:mt-[85px] mt-[138px] lg:min-h-[400px] justify-center"  style={{ backgroundColor: colorBackground,
-      backgroundImage: `url(${imageBackground})`, }}>
+    <Section.Container
+      class="lg:px-8 lg:mt-[85px] mt-[138px] lg:min-h-[400px] justify-center"
+      style={{
+        backgroundColor: colorBackground,
+        backgroundImage: `url(${imageBackground})`,
+      }}
+    >
       <div class="relative sm:mx-0 flex w-full flex-col justify-center items-center">
         <Picture>
           <Source
@@ -48,7 +56,6 @@ function Banner({ description, images, cta, colorText, imageBackground, colorBac
             "h-full max-w-full md:max-w-[50%] justify-start",
           )}
         >
-          
           {description && (
             <span
               style={{ color: colorText }}

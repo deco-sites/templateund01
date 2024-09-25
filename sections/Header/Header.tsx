@@ -118,7 +118,11 @@ const Desktop = (
           </div>
         </div>
         <div class="place-self-center">
-          <a href="/" aria-label="Store logo" class="logo relative left-[-24px]">
+          <a
+            href="/"
+            aria-label="Store logo"
+            class="logo relative left-[-24px]"
+          >
             <Image
               src={logo.src}
               alt={logo.alt}
@@ -126,7 +130,11 @@ const Desktop = (
               height={logo.height || 23}
             />
           </a>
-          <a href="/" aria-label="Store logo" class="logoSecondary relative left-[-24px]">
+          <a
+            href="/"
+            aria-label="Store logo"
+            class="logoSecondary relative left-[-24px]"
+          >
             <Image
               src={logoSecondary.src}
               alt={logoSecondary.alt}

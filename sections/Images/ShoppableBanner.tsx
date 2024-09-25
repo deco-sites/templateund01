@@ -76,7 +76,10 @@ const DEFAULT_PROPS: Props = {
 };
 
 function ShoppableBanner(props: Props) {
-  const { link, text, title, image, pins, background } = { ...DEFAULT_PROPS, ...props };
+  const { link, text, title, image, pins, background } = {
+    ...DEFAULT_PROPS,
+    ...props,
+  };
 
   return (
     <div class="container-custom mb-8 mt-12">
@@ -129,7 +132,10 @@ function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="flex flex-col justify-center gap-6 py-20 px-8"  style={{ backgroundColor: background }}>
+        <div
+          class="flex flex-col justify-center gap-6 py-20 px-8"
+          style={{ backgroundColor: background }}
+        >
           {title?.imageBanner && (
             <figure class="relative">
               <Picture class="w-fit">
@@ -163,7 +169,10 @@ function ShoppableBanner(props: Props) {
             {text?.content}
           </p>
           <div class={`card-actions ${link?.layout?.position}`}>
-            <span class={`text-white ${text?.layout?.position} text-base`} href={link?.href}>
+            <span
+              class={`text-white ${text?.layout?.position} text-base`}
+              href={link?.href}
+            >
               {link?.text}
             </span>
           </div>

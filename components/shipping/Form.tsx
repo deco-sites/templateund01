@@ -13,7 +13,7 @@ export default function Form({ items }: Props) {
     <div class="flex flex-col gap-2 border border-[#DDDDDD] rounded-[1px] p-8">
       <div class="flex flex-col">
         <span class="text-base-200 text-2xl">
-        Calcular frete e prazo
+          Calcular frete e prazo
         </span>
       </div>
 
@@ -35,8 +35,13 @@ export default function Form({ items }: Props) {
           maxLength={8}
           size={8}
         />
-        <button type="submit" class="h-8 border border-base-200 join-item no-animation w-3/12 !bg-transparent rounded-none">
-          <span class="[.htmx-request_&]:hidden inline text-base-200">Calcular</span>
+        <button
+          type="submit"
+          class="h-8 border border-base-200 join-item no-animation w-3/12 !bg-transparent rounded-none"
+        >
+          <span class="[.htmx-request_&]:hidden inline text-base-200">
+            Calcular
+          </span>
           <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
         </button>
       </form>

@@ -158,7 +158,34 @@ function ProductInfo({ page }: Props) {
         <span class="text-sm">
           {description && (
             <details class="aparence-none">
-              <summary class="cursor-pointer text-base text-[#101820] flex justify-between border-b border-[#101820]" id="more-info">DESCRIÇÃO <span><svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.7462 14.783H10.5" stroke="#101820" stroke-width="1.5" stroke-linecap="round"/><path d="M15.623 19.5649V10" stroke="#101820" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+              <summary
+                class="cursor-pointer text-base text-[#101820] flex justify-between border-b border-[#101820]"
+                id="more-info"
+              >
+                DESCRIÇÃO{" "}
+                <span>
+                  <svg
+                    width="31"
+                    height="30"
+                    viewBox="0 0 31 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.7462 14.783H10.5"
+                      stroke="#101820"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M15.623 19.5649V10"
+                      stroke="#101820"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </summary>
               <div
                 class="mt-2"
                 dangerouslySetInnerHTML={{ __html: description }}
