@@ -8,18 +8,15 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "title": "Register and Save Big!",
-        "cta": {
-          "label": "ver produtos",
-          "href": "#"
-        },
-        "description": "descrição",
+        "__resolveType": "site/sections/Images/BannerAbout.tsx",
+        "colorBackground": "#1034A6",
+        "imageBackground": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/f12c6be1-c534-434f-96cd-fb2e8a862f54/Group-3961.png",
         "images": {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/2d7fd389-574f-4887-8574-bd77e75fcb52/top-aerial-drone-view-woman-swimsuit-bikini-relaxing-sunbathing-beach-(1)-1.png",
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/1477cac2-dca6-4c47-a411-d345fcaaac59/Mask-group.png"
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/e04d2c1b-77bc-48af-aff9-0018bf16af7b/LogoMonoi.png",
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/e04d2c1b-77bc-48af-aff9-0018bf16af7b/LogoMonoi.png"
         },
-        "colorText": "#f2f2f2"
+        "description": "Desvendando o Segredo da Juventude com MONOÏ PRÈCIEUX: O Elixir de Beleza Taitiano. Venha Conhecer o Mistério por Trás do Brilho e Vitalidade das Mulheres Taitianas, e Desperte sua Própria Beleza Interior e Exterior com o Poder do MONOÏ PRÈCIEUX.",
+        "colorText": "#ffffff"
       }
     },
     {
@@ -27,17 +24,17 @@
       "section": {
         "__resolveType": "site/sections/Images/ShoppableBanner.tsx",
         "title": {
-          "imageBanner": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/e04d2c1b-77bc-48af-aff9-0018bf16af7b/LogoMonoi.png"
+          "content": "FABIOLA AGUIRRE: A CEO DA MONOÏ"
         },
         "image": {
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/96893289-c4ef-4818-bcf9-a51a4f40d593/tender-sensitive-asian-woman-knitted-dress-swimsuit-posing-with-vines-tree-frangipani-flower-hair-romantic-perfect-skin-(1)-1.png",
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/d0b15d2a-865e-4e9b-b59e-7ae76652d6dc/tender-sensitive-asian-woman-knitted-dress-swimsuit-posing-with-vines-tree-frangipani-flower-hair-romantic-perfect-skin-(1)-1.png",
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/73e7bf49-b239-4796-83e9-56cb707c0da7/Usaremos-essa-01-1.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/73e7bf49-b239-4796-83e9-56cb707c0da7/Usaremos-essa-01-1.png",
           "altText": "imagem apresentação"
         },
         "pins": [],
         "text": {
           "layout": {
-            "position": "text-center"
+            "position": "text-left"
           }
         },
         "link": {
@@ -46,6 +43,91 @@
           "layout": {
             "position": "justify-center"
           }
+        },
+        "background": "#1034A6"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/BannerVideo.tsx",
+        "videos": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/333a8876-886f-4ce8-9f74-63e0951b5c88/Heavy-Is-The-Crown-ft.-Linkin-Park-(Official-Music-Video)-_-League-of-Legends-Worlds-2024-Anthem.mp4",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/333a8876-886f-4ce8-9f74-63e0951b5c88/Heavy-Is-The-Crown-ft.-Linkin-Park-(Official-Music-Video)-_-League-of-Legends-Worlds-2024-Anthem.mp4"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/BannerSideSideImage.tsx",
+        "image": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/3193e481-53e8-479a-bbf0-d69cc430b436/image-removebg-preview-(5)-1.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/3193e481-53e8-479a-bbf0-d69cc430b436/image-removebg-preview-(5)-1.png",
+          "altText": "flor",
+          "bottom": "auto",
+          "top": "18px",
+          "left": "5px",
+          "right": "auto"
+        },
+        "text": {
+          "content": "<p>No coração das ilhas polinésias, encontra-se uma flor exótica e emblemática chamada Tiaré. Esta bela flor branca, cientificamente conhecida como Gardenia tahitensis, é a essência por trás do renomado Monoï Tiki Tahiti, um elixir que desafia o tempo e encanta com seus benefícios. A Tiaré, além de ser a flor nacional da Polinésia Francesa, desempenha um papel fundamental na produção do Monoï.</p><p>As pétalas delicadas são cuidadosamente colhidas e maceradas em óleo de coco puro, dando origem a um produto natural e luxuoso. A tradição de preparar o Monoï tem raízes antigas, honrando o conhecimento ancestral das culturas locais. As propriedades da Tiaré vão além de seu aroma suave e reconfortante. Suas características antioxidantes e hidratantes ajudam a nutrir a pele e o cabelo, promovendo uma aparência saudável e revitalizada. A Tiaré também é conhecida por suas qualidades terapêuticas, proporcionando uma sensação de tranquilidade e relaxamento, enriquecendo o Monoï com uma dimensão espiritual.</p><p>A história da Tiaré e sua conexão com o Monoï Tiki Tahiti destacam a importância de honrar as tradições e conhecimentos culturais na busca pela beleza e bem-estar. O perfume delicado da flor e os benefícios do Monoï ecoam através do tempo, trazendo consigo uma ligação profunda com a natureza e as tradições das ilhas polinésias.</p>"
+        },
+        "title": {
+          "content": "A Flor de Tiaré e seu Efeito Transformador no Monoï Tiki Tahiti"
+        },
+        "imageLeft": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/3193e481-53e8-479a-bbf0-d69cc430b436/image-removebg-preview-(5)-1.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/3193e481-53e8-479a-bbf0-d69cc430b436/image-removebg-preview-(5)-1.png",
+          "altText": "flor",
+          "top": "18px",
+          "bottom": "auto",
+          "left": "5px",
+          "right": "auto"
+        },
+        "imageRight": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/3193e481-53e8-479a-bbf0-d69cc430b436/image-removebg-preview-(5)-1.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/3193e481-53e8-479a-bbf0-d69cc430b436/image-removebg-preview-(5)-1.png",
+          "altText": "flor",
+          "top": "auto",
+          "bottom": "18px",
+          "left": "auto",
+          "right": "5px"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/BannerSideSideImage.tsx",
+        "image": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fc0dbc8b-3397-4516-b9e3-65e8603b2a08/Vector.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fc0dbc8b-3397-4516-b9e3-65e8603b2a08/Vector.png",
+          "altText": "flor"
+        },
+        "text": {
+          "content": "<p>Cuidado com a Pele: Mais do que Aparência, uma Jornada de Autoamor Em meio à agitação da vida moderna, o cuidado com a pele transcende a mera preocupação estética. É uma jornada de autoamor e autocuidado, onde a busca por uma pele saudável e radiante se torna uma expressão tangível de bem-estar interior.</p><p>A pele é o maior órgão do corpo humano, desempenhando um papel crucial na proteção contra fatores externos, como poluição, raios ultravioleta e variações climáticas. Cuidar dela é um ato de respeito pelo próprio corpo, uma vez que a pele saudável não apenas contribui para uma aparência jovem, mas também é um sinal de vitalidade interna. Além da proteção, o cuidado com a pele envolve a hidratação, nutrição e prevenção de danos. Produtos naturais, como o Monoï Tiki Tahiti, oferecem uma abordagem holística para essa jornada.</p><p>Com ingredientes orgânicos e propriedades restauradoras, esses produtos não apenas mimam a pele, mas também oferecem um momento de relaxamento e autoreflexão. A importância do cuidado com a pele não se restringe a um gênero ou faixa etária. Independentemente de ser jovem ou idoso, homem ou mulher, todos podem beneficiar-se dos rituais de cuidado da pele. Não se trata apenas de combater os sinais visíveis do envelhecimento, mas também de nutrir a autoestima e o bem-estar mental. Portanto, enquanto exploramos os segredos da pele saudável, lembremos que essa jornada é uma expressão tangível de como nos valorizamos. O cuidado com a pele transcende a superfície e nos lembra da importância de nos conectarmos conosco mesmos, encontrando equilíbrio, confiança e amor próprio ao longo do caminho.</p>"
+        },
+        "title": {
+          "content": "Cuidado com a Pele:  Mais do que Aparência, uma Jornada de Autoamor"
+        },
+        "imageLeft": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fc0dbc8b-3397-4516-b9e3-65e8603b2a08/Vector.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fc0dbc8b-3397-4516-b9e3-65e8603b2a08/Vector.png",
+          "altText": "flor",
+          "top": "auto",
+          "bottom": "18px",
+          "left": "5px",
+          "right": "auto"
+        },
+        "imageRight": {
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fc0dbc8b-3397-4516-b9e3-65e8603b2a08/Vector.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fc0dbc8b-3397-4516-b9e3-65e8603b2a08/Vector.png",
+          "altText": "flor",
+          "top": "18px",
+          "bottom": "auto",
+          "left": "auto",
+          "right": "5px"
         }
       }
     },

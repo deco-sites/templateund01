@@ -3,14 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-
+  @font-face {
+    font-family: 'Glorify';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Glorifydemo-BW3J3.otf) format('otf');
+  }
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
     overflow-x: hidden;
     
   }
- 
+  .custom-p p{
+    padding-bottom: 16px;
+  }
+  .custom-p h3{
+    padding-bottom: 16px;
+    font-weight: bold;
+  }
   input.accept{
     background: transparent !important;
   }

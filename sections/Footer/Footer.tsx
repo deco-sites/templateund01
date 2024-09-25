@@ -45,7 +45,7 @@ function Footer({
   return (
     <footer
       class="px-5 sm:py-8 sm:px-0 text-white lg:bg-black bg-[#05123299]"
-      style={{ backgroundImage: imageBackground }}
+      style={{ backgroundImage: `url(${imageBackground})` }}
     >
       <div class="container-custom flex flex-col gap-5 sm:gap-10 py-10">
         <ul class="grid grid-flow-row sm:grid-flow-col gap-6 ">

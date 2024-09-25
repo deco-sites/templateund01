@@ -10,44 +10,15 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "title": "Register and Save Big!",
-        "cta": {
-          "label": "ver produtos",
-          "href": "#"
-        },
-        "images": {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/2d7fd389-574f-4887-8574-bd77e75fcb52/top-aerial-drone-view-woman-swimsuit-bikini-relaxing-sunbathing-beach-(1)-1.png",
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/1477cac2-dca6-4c47-a411-d345fcaaac59/Mask-group.png"
-        },
-        "colorText": "#f2f2f2",
-        "description": "descrição"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/ShoppableBanner.tsx",
-        "image": {
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/96893289-c4ef-4818-bcf9-a51a4f40d593/tender-sensitive-asian-woman-knitted-dress-swimsuit-posing-with-vines-tree-frangipani-flower-hair-romantic-perfect-skin-(1)-1.png",
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/d0b15d2a-865e-4e9b-b59e-7ae76652d6dc/tender-sensitive-asian-woman-knitted-dress-swimsuit-posing-with-vines-tree-frangipani-flower-hair-romantic-perfect-skin-(1)-1.png",
-          "altText": "imagem apresentação"
-        },
-        "pins": [],
-        "text": {
-          "layout": {
-            "position": "text-center"
-          }
-        },
-        "link": {
-          "text": "Desvendando o Segredo da Juventude com MONOÏ PRÈCIEUX: O Elixir de Beleza Taitiano. Venha Conhecer o Mistério por Trás do Brilho e Vitalidade das Mulheres Taitianas, e Desperte sua Própria Beleza Interior e Exterior com o Poder do MONOÏ PRÈCIEUX.",
-          "href": "/",
+        "__resolveType": "site/sections/Images/BannerText.tsx",
+        "title": {
           "layout": {
             "position": "justify-center"
-          }
+          },
+          "content": "PRIVACIDADE"
         },
-        "title": {
-          "imageBanner": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/e04d2c1b-77bc-48af-aff9-0018bf16af7b/LogoMonoi.png"
+        "text": {
+          "content": "<p>Sabemos que você se preocupa com a forma com que as suas informações são utilizadas, e ficamos gratos com a sua confiança de que cuidaremos delas de forma sensata. Iremos salvar e guardar a sua privacidade ao utilizar nossos serviços. Essa é a nossa Política de Privacidade, tem a finalidade de deixar o mais claro possível a nossa política de coleta e compartilhamento de dados, informando sobre os dados coletados e a forma que utilizamos.</p><h3>CONSENTIMENTO</h3><p>Ao acessar e interagir com nossa loja, efetuando cadastro ou pagamento, você declara o seu expresso consentimento para procedermos com o tratamento de dados pessoais quando julgarmos adequado à prestação de nossos serviços. &nbsp;Se pedirmos suas informações pessoais por uma razão secundária, nos comprometemos a pedir seu consentimento.</p><h3>COLETA DE DADOS</h3><p>Ao navegar em nossa loja, efetuar o cadastro ou ao efetuar uma compra, coletamos as informações pessoais que você nos fornece como parte do procedimento, tais como seu nome, endereço e e-mail, dentre outras que forem estritamente necessárias a concretização desta finalidade.<br>Quando você navega pela nossa loja, recebemos também automaticamente o protocolo de internet do seu computador a fim de obter informações que nos ajudam a saber mais sobre seu navegador e sistema operacional.<br>Podemos também registrar e gravar todos os dados fornecidos em toda comunicação realizada com nossa equipe, seja por correio eletrônico, mensagens, telefone ou qualquer outro meio.<br>Ao submeter seus dados para pagamento, podemos coletar informações sobre a compra ou transação. Isso abrange suas informações de pagamento, os dados do seu cartão de crédito ou débito, informações de conta e autenticação, além dos dados de faturamento, tais como endereço completo, CPF e CNPJ. Nós não armazenamos os seus dados de cartão de crédito ou débito, tais informações são enviadas diretamente ao meio de pagamento.</p><h3>ARMAZENAMENTO DE DADOS</h3><p>Os dados coletados podem ser armazenados e processados no Brasil e em qualquer outro país escolhido para operar eficientemente, melhorar o desempenho e proteger os dados no caso de uma falha ou outro problema.<br>Nossa empresa utiliza a plataforma Vnda, empresa reconhecida no mercado pela sua expertise, e que nos fornece uma plataforma de e-commerce, permitindo vender nossos produtos online.<br>Seus dados serão sempre armazenados em um servidor seguro protegido por firewall.<br>Informamos ainda que manteremos seus dados armazenados pelo período determinado legalmente, para o fim específico de cumprimento de obrigações legais, tributárias ou judiciais.</p><h3>DIVULGAÇÃO e COMPARTILHAMENTO</h3><p>Seus dados serão compartilhados com terceiros para cumprir exigências legais, regulatórias ou fiscais, envolvendo a divulgação de seus dados pessoais a terceiros, a um tribunal, reguladores ou agências governamentais.<br>Nossos fornecedores terceirizados irão coletar, usar e divulgar suas informações apenas quando necessário para permitir a realização dos serviços que eles nos fornecem.<br>Caso ocorra a fusão da nossa loja com outra empresa, suas informações podem ser transferidas para os novos proprietários para que possamos continuar vendendo produtos para você.</p><h3>LINKS</h3><p>Quando você clicar em links na nossa loja, eles podem lhe direcionar para fora do nosso site. Não somos responsáveis pelas práticas de privacidade de outros sites e recomendamos a leitura das políticas de privacidade deles.</p><h3>COOKIES</h3><p>Registramos dados de sua visita ao nosso site através de cookies e outras tecnologias de rastreamento, incluindo seu endereço IP e nome de domínio, a versão do seu navegador e do seu sistema operacional, dados de tráfego online, dados de localização, logs da web e outros dados de navegação.</p><p>Cookies são pequenos arquivos, que transferidos para o seu navegador ou dispositivo, permitem que estes sejam reconhecidos.</p><p>Eles são utilizados para uma navegação confiável, para melhor entender suas preferências e para tornar nosso site relevante aos seus interesses e necessidades.<br>Os cookies são essenciais para o funcionamento da Internet, permitindo a prestação de vários serviços interativos, facilitando a navegação e usabilidade do site.<br>Em nenhuma condição os cookies podem causar qualquer dano ao seu dispositivo. Você pode excluir tais cookies diretamente nas configurações do seu próprio browser (navegador).</p><h3>SEGURANÇA</h3><p>Todos os dados que você nos fornece são armazenados em servidores seguros, nossos ou de fornecedores contratados, sempre acessados e utilizados de acordo com nossas políticas e padrões de segurança. Tomamos medidas de boas práticas e nosso Data Center possui certificações para garantir que os dados que coletamos sejam processados de acordo com segurança onde quer que os dados estejam localizados.</p><p>O acesso ao seu perfil é de responsabilidade exclusiva sua, por meio de uma senha (ou por meio de outra mídia escolhida) que lhe permite acessar certas partes de nossos sites, sendo de sua responsabilidade manter esta senha confidencial e por cumprir com quaisquer outros procedimentos de segurança. Nunca solicitaremos sua senha, e pedimos que você não a compartilhe com ninguém.<br>A segurança e confiabilidade dos dispositivos que você utiliza para acessar os nossos serviços, tais como computadores, celulares, tablets ou outros dispositivos, é de total responsabilidade sua. Você deve por meios próprios buscar proteger os sistemas operacionais desses dispositivos contra qualquer ameaça externa.</p><h3>COMO ACESSAR E CONTROLAR SUAS INFORMAÇÕES PESSOAIS</h3><p>Você pode através da central do cliente realizar as alterações necessárias em seu cadastro ou solicitar informações, esclarecimentos ou exclusão de seus dados Para isto, basta entrar em contato através da FALE CONOSCO.Sua solicitação será atendida, nos termos da lei de proteção de dados aplicável.</p><h3><br>ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE</h3><p>Reservamos o direito de modificar essa política de privacidade a qualquer momento. Portanto, por favor, leia-a com frequência. As alterações e esclarecimentos terão efeito imediato após a publicação no site.</p>"
         }
       }
     },

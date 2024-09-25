@@ -20,8 +20,21 @@
     "secondary": "#EEEAE5"
   },
   "font": {
-    "family": "Inter",
-    "styleSheet": "normal"
+    "__resolveType": "website/loaders/fonts/googleFonts.ts",
+    "fonts": [
+      {
+        "variations": [
+          {
+            "weight": "400"
+          }
+        ],
+        "family": "Urbanist"
+      },
+      {
+        "variations": [],
+        "family": "Glorify DEMO"
+      }
+    ]
   },
   "complementaryColors": {
     "base-200": "#051232"

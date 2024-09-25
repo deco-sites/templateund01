@@ -111,16 +111,16 @@ function Newsletter({
           hx-post={useComponent(import.meta.url)}
           class="flex flex-col sm:flex-row w-full flex-wrap"
         >
-          <fieldset class="flex gap-2 flex-row flex-nowrap w-full">
+          <fieldset class="flex gap-2 flex-row flex-wrap lg:flex-nowrap w-full">
             <input
               name="email"
-              class="input border-b-2 rounded-none border-0 bg-transparent outline-none border-[#051232] min-w-[85%] flex-grow mb-4 lg:mr-4 pl-0"
+              class="input border-b-2 rounded-none border-0 bg-transparent outline-none border-[#051232] max-lg:w-full lg:min-w-[85%] flex-grow mb-4 lg:mr-4 pl-0"
               type="text"
               placeholder={placeholder}
             />
 
             <button
-              class="btn btn-primary"
+              class="btn max-lg:w-full btn-primary"
               type="submit"
             >
               <span class="[.htmx-request_&]:hidden inline">
@@ -130,7 +130,7 @@ function Newsletter({
             </button>
 
           </fieldset>
-          <label class="flex flex-row gap-3 items-center text-xs">
+          <label class="flex flex-row gap-3 items-center text-xs mt-4">
             <input
               type="checkbox"
               name="checkbox"

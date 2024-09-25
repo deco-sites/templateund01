@@ -8,7 +8,7 @@ export interface Props {
     desktop?: ImageWidget;
     altText: string;
   };
-
+  background: string;
   pins?: Pin[];
 
   title?: {
@@ -66,6 +66,7 @@ const DEFAULT_PROPS: Props = {
     href: "#",
     text: "Text link",
   },
+  background: "#1034A6",
   pins: [],
   image: {
     mobile:
@@ -75,24 +76,24 @@ const DEFAULT_PROPS: Props = {
 };
 
 function ShoppableBanner(props: Props) {
-  const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
+  const { link, text, title, image, pins, background } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div class="container-custom mb-8">
+    <div class="container-custom mb-8 mt-12">
       <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2">
         <figure class="relative">
-          <Picture>
+          <Picture class="max-lg:w-full">
             <Source
               media="(max-width: 767px)"
               src={image?.mobile}
-              width={150}
-              height={150}
+              width={250}
+              height={250}
             />
             <Source
               media="(min-width: 768px)"
               src={image?.desktop ? image?.desktop : image?.mobile}
-              width={384}
-              height={227}
+              width={696}
+              height={614}
             />
             <img
               class="w-full h-full object-cover"
@@ -128,7 +129,7 @@ function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="flex flex-col justify-center gap-6 py-20 px-8 bg-base-200">
+        <div class="flex flex-col justify-center gap-6 py-20 px-8"  style={{ backgroundColor: background }}>
           {title?.imageBanner && (
             <figure class="relative">
               <Picture class="w-fit">
@@ -155,14 +156,14 @@ function ShoppableBanner(props: Props) {
               </Picture>
             </figure>
           )}
-          <h2 class={`card-title flex ${title?.layout?.position}`}>
+          <h2 class={`card-title flex text-white ${title?.layout?.position}`}>
             {title?.content}
           </h2>
           <p class={`text-base-content ${text?.layout?.position}`}>
             {text?.content}
           </p>
           <div class={`card-actions ${link?.layout?.position}`}>
-            <span class="text-white text-center text-base" href={link?.href}>
+            <span class={`text-white ${text?.layout?.position} text-base`} href={link?.href}>
               {link?.text}
             </span>
           </div>

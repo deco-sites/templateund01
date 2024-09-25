@@ -107,7 +107,7 @@ const Desktop = (
     </Modal> */
     }
 
-    <div class="flex flex-col gap-4 py-3 container-custom">
+    <div class="flex flex-col gap-4 py-3 container-custom justify-center h-full">
       <div class="flex justify-between items-center">
         <div class="flex justify-between items-center">
           <ul class="flex">
@@ -279,14 +279,14 @@ function Header({
   return (
     <>
       <HeaderScroll
-        className={`fixed z-50 w-full`}
+        className={`fixed z-50 w-full h-full`}
         style={{
           height: device === "desktop"
             ? HEADER_HEIGHT_DESKTOP
             : HEADER_HEIGHT_MOBILE,
         }}
       >
-        <div class="w-full z-50">
+        <div class="w-full z-50 h-full">
           {alerts.length > 0 && <Alert alerts={alerts} />}
           {device === "desktop"
             ? <Desktop logo={logo} {...props} />
