@@ -118,7 +118,7 @@ const Desktop = (
           </div>
         </div>
         <div class="place-self-center">
-          <a href="/" aria-label="Store logo" class="logo">
+          <a href="/" aria-label="Store logo" class="logo relative left-[-24px]">
             <Image
               src={logo.src}
               alt={logo.alt}
@@ -126,7 +126,7 @@ const Desktop = (
               height={logo.height || 23}
             />
           </a>
-          <a href="/" aria-label="Store logo" class="logoSecondary">
+          <a href="/" aria-label="Store logo" class="logoSecondary relative left-[-24px]">
             <Image
               src={logoSecondary.src}
               alt={logoSecondary.alt}
@@ -226,7 +226,7 @@ const Mobile = (
       {logo && (
         <a
           href="/"
-          class=" inline-flex items-center justify-center logo ml-[40px] mt-4"
+          class=" inline-flex items-center justify-center relative left-[-24px] logo ml-[40px] mt-4"
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >
@@ -241,7 +241,7 @@ const Mobile = (
       {logoSecondary && (
         <a
           href="/"
-          class="inline-flex items-center justify-center ml-[40px] logoSecondary mt-4"
+          class="inline-flex items-center justify-center ml-[40px] logoSecondary mt-4 relative left-[-24px]"
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >

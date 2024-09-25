@@ -46,7 +46,7 @@ function ShoppableBanner(props: Props) {
     <div class="container-custom mt-[148px] lg:mt-[112px] mb-8">
       <div class="" >
         <div className="relative flex justify-center items-center">
-          <h2 class={`card-title text-[28px] mb-4 text-[#1a1a1a] max-w-[440px] z-20 flex font-[Glorify] ${title?.layout?.position}`}>
+          <h2 class={`card-title text-[28px] mb-4 text-[#1a1a1a] max-w-[440px] z-20 flex font-["Give You Glory", cursive] ${title?.layout?.position}`}>
             {title?.content}
           </h2>
 

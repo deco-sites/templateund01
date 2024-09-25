@@ -28,11 +28,19 @@
             "weight": "400"
           }
         ],
-        "family": "Urbanist"
+        "family": "Inter"
       },
       {
         "variations": [],
-        "family": "Glorify DEMO"
+        "family": "Sans Serif"
+      },
+      {
+        "variations": [
+          {
+            "weight": "400"
+          }
+        ],
+        "family": "Give You Glory"
       }
     ]
   },

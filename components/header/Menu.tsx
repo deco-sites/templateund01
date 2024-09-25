@@ -1,25 +1,46 @@
-import Icon from "../../components/ui/Icon.tsx";
+import Image from "apps/website/components/Image.tsx";
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
+import Icon from "../../components/ui/Icon.tsx";
 
 export interface Props {
   navItems?: SiteNavigationElement[];
 }
 
 function MenuItem({ item }: { item: SiteNavigationElement }) {
+  if (!item.children || item.children.length === 0) {
+    return (
+      <a class="text-sm" href={item.url}>
+        {item.image?.[0]?.url && (
+          <Image
+            class="py-6"
+            src={item.image[0].url}
+            alt={item.image[0].alternateName}
+            width={300}
+            height={332}
+            loading="lazy"
+          />
+        )}
+        {item.name}
+      </a>
+    );
+  }
+
   return (
     <div class="collapse collapse-plus">
       <input type="checkbox" />
       <div class="collapse-title">{item.name}</div>
       <div class="collapse-content">
         <ul>
-          <li>
-            <a class="underline text-sm" href={item.url}>Ver todos</a>
-          </li>
-          {item.children?.map((node) => (
+          {item.children.map((node) => (
             <li>
               <MenuItem item={node} />
             </li>
           ))}
+          <li>
+            <a class="underline text-sm" href={item.url}>
+              Ver todos
+            </a>
+          </li>
         </ul>
       </div>
     </div>

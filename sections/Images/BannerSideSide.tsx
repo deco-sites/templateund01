@@ -32,14 +32,14 @@ function Banner(
         <Source
           media="(max-width: 640px)"
           src={mobile}
-          width={335}
-          height={572}
+          width={328}
+          height={328}
         />
         <Source
           media="(min-width: 640px)"
           src={desktop || mobile}
-          width={1320}
-          height={480}
+          width={672}
+          height={608}
         />
         <img src={desktop} alt={title} class="w-full object-cover" />
       </Picture>
