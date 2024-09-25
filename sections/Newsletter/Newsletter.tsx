@@ -114,7 +114,7 @@ function Newsletter({
           <fieldset class="flex gap-2 flex-row flex-wrap lg:flex-nowrap w-full">
             <input
               name="email"
-              class="input border-b-2 rounded-none border-0 bg-transparent outline-none border-[#051232] max-lg:w-full lg:min-w-[85%] flex-grow mb-4 lg:mr-4 pl-0"
+              class="input border-b-2 rounded-none border-0 bg-transparent outline-none border-[#051232] max-lg:w-full lg:min-w-[74%] flex-grow mb-4 lg:mr-4 pl-0"
               type="text"
               placeholder={placeholder}
             />
