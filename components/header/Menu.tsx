@@ -9,7 +9,10 @@ export interface Props {
 function MenuItem({ item }: { item: SiteNavigationElement }) {
   if (!item.children || item.children.length === 0) {
     return (
-      <a class="text-sm min-h-auto h-[73px] mb-[16px] pl-0 flex flex-row items-center gap-[7px] " href={item.url}>
+      <a
+        class="text-sm min-h-auto h-[73px] mb-[16px] pl-0 flex flex-row items-center gap-[7px] "
+        href={item.url}
+      >
         {item.image?.[0]?.url && (
           <Image
             class="py-6"
@@ -28,19 +31,19 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="collapse collapse-plus">
       <input type="checkbox" />
-        <div class="collapse-title min-h-auto mb-[16px] h-[73px] pl-0 flex flex-row items-center gap-[7px]">
-          {item.image?.[0]?.url && (
-            <Image
-              class="py-6"
-              src={item.image[0].url}
-              alt={item.image[0].alternateName}
-              width={79}
-              height={73}
-              loading="lazy"
-            />
-          )}
-          {item.name}
-        </div>
+      <div class="collapse-title min-h-auto mb-[16px] h-[73px] pl-0 flex flex-row items-center gap-[7px]">
+        {item.image?.[0]?.url && (
+          <Image
+            class="py-6"
+            src={item.image[0].url}
+            alt={item.image[0].alternateName}
+            width={79}
+            height={73}
+            loading="lazy"
+          />
+        )}
+        {item.name}
+      </div>
       <div class="collapse-content">
         <ul>
           {item.children.map((node) => (
@@ -73,7 +76,7 @@ function Menu({ navItems = [] }: Props) {
           <span class="!border-0 text-white px-[16px] py-[14px] text-xs">
             <a href="/produtos">
               VER TODOS OS PRODUTOS
-            </a>  
+            </a>
           </span>
         </div>
       </div>

@@ -149,10 +149,12 @@ function Footer({
             <span class="text-xs font-medium text-white">{trademark}</span>
           </div>
 
-          {/* <div class="flex flex-nowrap items-center justify-center gap-4">
+          {
+            /* <div class="flex flex-nowrap items-center justify-center gap-4">
             <span class="text-sm font-normal text-base-400">Powered by</span>
             <PoweredByDeco />
-          </div> */}
+          </div> */
+          }
         </div>
       </div>
     </footer>
