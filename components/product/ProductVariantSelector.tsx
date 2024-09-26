@@ -87,7 +87,7 @@ function VariantSelector({ product }: Props) {
       {filteredNames.map((name) => (
         <li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
-          <ul class="flex flex-row gap-4">
+          <ul class="flex flex-row flex-wrap gap-4">
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {

@@ -132,6 +132,21 @@ header input::placeholder{
   color: currentColor !important;
   font-size: 14px;
 }
+.collapse-plus > .collapse-title:after{
+  content: ">";
+  /* transform: rotate(90deg); */
+  top: 35%;
+  right: 8%;
+  font-family: monospace;
+  font-size: 20px;
+  transition: none !important;
+}
+.collapse-plus:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after{
+  content: ">";
+  transform: rotate(270deg);
+  right: 12%;
+  transition: none !important;
+}
 @keyframes progress-frame {
   0% {
     --dot-progress: 0%

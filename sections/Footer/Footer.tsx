@@ -1,6 +1,6 @@
 import { type ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+// import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
 import Section from "../../components/ui/Section.tsx";
 
 /** @titleBy title */
@@ -44,10 +44,10 @@ function Footer({
 }: Props) {
   return (
     <footer
-      class="px-5 sm:py-8 sm:px-0 text-white lg:bg-black bg-[#05123299]"
+      class=" sm:px-0 text-white"
       style={{ backgroundImage: `url(${imageBackground})` }}
     >
-      <div class="container-custom flex flex-col gap-5 sm:gap-10 py-10">
+      <div class="bg-[#05123290] sm:py-8 px-5 lg:bg-black flex flex-col gap-5 sm:gap-10 py-10">
         <ul class="grid grid-flow-row sm:grid-flow-col gap-6 ">
           {links.map(({ title, href, children }) => (
             <li class="flex flex-col gap-4 items-center">
@@ -149,10 +149,10 @@ function Footer({
             <span class="text-xs font-medium text-white">{trademark}</span>
           </div>
 
-          <div class="flex flex-nowrap items-center justify-center gap-4">
+          {/* <div class="flex flex-nowrap items-center justify-center gap-4">
             <span class="text-sm font-normal text-base-400">Powered by</span>
             <PoweredByDeco />
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -59,32 +59,72 @@
       "@type": "SiteNavigationElement",
       "url": "/valentines-day",
       "name": "Valentine's Day",
-      "children": []
+      "children": [],
+      "image": [
+        {
+          "image": [],
+          "video": [],
+          "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fb940500-0794-4775-a1e9-dce4be5e7f83/image-227.png"
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",
       "url": "/women",
       "name": "Women",
-      "children": []
+      "children": [],
+      "image": [
+        {
+          "image": [],
+          "video": [],
+          "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/fb940500-0794-4775-a1e9-dce4be5e7f83/image-227.png"
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",
       "url": "/men",
       "name": "Men",
-      "children": []
+      "children": [],
+      "image": [
+        {
+          "image": [],
+          "video": [],
+          "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/b89ec2d2-f125-4395-8fd3-5163bcf06394/image-227.png"
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",
       "url": "/clearance",
       "name": "Clearance",
-      "children": []
+      "children": [],
+      "image": [
+        {
+          "image": [],
+          "video": [],
+          "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/b89ec2d2-f125-4395-8fd3-5163bcf06394/image-227.png"
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",
       "url": "/blog",
       "name": "Blog",
       "children": [],
-      "identifier": "Blog"
+      "identifier": "Blog",
+      "image": [
+        {
+          "image": [
+            {
+              "image": [],
+              "video": [],
+              "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateund01/b89ec2d2-f125-4395-8fd3-5163bcf06394/image-227.png"
+            }
+          ],
+          "video": []
+        }
+      ]
     }
   ],
   "loading": "eager",

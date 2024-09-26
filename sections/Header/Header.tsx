@@ -234,7 +234,7 @@ const Mobile = (
       {logo && (
         <a
           href="/"
-          class=" inline-flex items-center justify-center relative left-[-24px] logo ml-[40px] mt-4"
+          class=" inline-flex items-center justify-center relative logo ml-[40px] mt-4"
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >
@@ -249,7 +249,7 @@ const Mobile = (
       {logoSecondary && (
         <a
           href="/"
-          class="inline-flex items-center justify-center ml-[40px] logoSecondary mt-4 relative left-[-24px]"
+          class="inline-flex items-center justify-center ml-[40px] logoSecondary mt-4 relative "
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >

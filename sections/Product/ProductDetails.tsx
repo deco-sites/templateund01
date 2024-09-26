@@ -14,6 +14,7 @@ export default function ProductDetails({ page }: Props) {
   /**
    * Rendered when a not found is returned by any of the loaders run on this page
    */
+
   if (!page) {
     return (
       <div class="w-full flex justify-center items-center py-28">
@@ -30,10 +31,11 @@ export default function ProductDetails({ page }: Props) {
   return (
     <div class="container-custom flex flex-col gap-4 sm:gap-5 w-full py-12 sm:py-16 px-5 sm:px-0 max-lg:pt-[150px]">
       <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
+       {/* Product Name */}
 
       <div
         class={clx(
-          "container-custom grid",
+          "grid",
           "grid-cols-1 gap-2 py-0",
           "sm:grid-cols-5 sm:gap-6",
         )}

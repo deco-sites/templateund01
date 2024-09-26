@@ -97,7 +97,7 @@ function Gallery({
   return (
     <Section.Container>
       <Section.Header title={title} cta={cta} />
-
+      
       <ul class="grid gap-2 sm:gap-4 grid-cols-1 sm:grid-cols-2 px-5 sm:px-0">
         {banners.map((item) => (
           <li>
